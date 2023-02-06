@@ -16,24 +16,26 @@
   <meta name="author" content="KK">
   <meta name="keywords" content="">
   
-    <meta name="description" content="参考: https:&#x2F;&#x2F;github.com&#x2F;EYHN&#x2F;hexo-helper-live2d&#x2F;blob&#x2F;master&#x2F;README.zh-CN.md 安装1234567891011121314151617181920212223242526272829303132333435# git$ npm i -g yarn&gt; yarn@1.22.19 preinstall C:\Users\K\Ap">
+    <meta name="description" content="参考笔记 0 VM CentOS 环境  VMWare 16.2   CentOS 8.5  创建虚拟机   引用 iso 镜像文件前确保 已启用虚拟化    自定义硬件中引用后点完成 &#x2F; 点完成后在 虚拟机设置 中引用  安装CentOS KDUMP-实际服务器中需启用，但自己做测试可以先禁用以节省资源  安装界面显示不全，因为屏幕分辨率未被正确识别，要关闭虚拟机修改显示器设置，选择本机真实屏幕">
 <meta property="og:type" content="article">
-<meta property="og:title" content="向hexo添加2D虚拟人物">
-<meta property="og:url" content="http://example.com/2022/11/24/%E5%90%91hexo%E6%B7%BB%E5%8A%A02D%E8%99%9A%E6%8B%9F%E4%BA%BA%E7%89%A9/index.html">
+<meta property="og:title" content="Linux">
+<meta property="og:url" content="http://example.com/2023/02/04/Linux/index.html">
 <meta property="og:site_name" content="KK&#39;s Blog">
-<meta property="og:description" content="参考: https:&#x2F;&#x2F;github.com&#x2F;EYHN&#x2F;hexo-helper-live2d&#x2F;blob&#x2F;master&#x2F;README.zh-CN.md 安装1234567891011121314151617181920212223242526272829303132333435# git$ npm i -g yarn&gt; yarn@1.22.19 preinstall C:\Users\K\Ap">
+<meta property="og:description" content="参考笔记 0 VM CentOS 环境  VMWare 16.2   CentOS 8.5  创建虚拟机   引用 iso 镜像文件前确保 已启用虚拟化    自定义硬件中引用后点完成 &#x2F; 点完成后在 虚拟机设置 中引用  安装CentOS KDUMP-实际服务器中需启用，但自己做测试可以先禁用以节省资源  安装界面显示不全，因为屏幕分辨率未被正确识别，要关闭虚拟机修改显示器设置，选择本机真实屏幕">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-24T11:27:35.000Z">
-<meta property="article:modified_time" content="2023-02-03T14:31:11.562Z">
+<meta property="og:image" content="http://example.com/img/linux.png">
+<meta property="article:published_time" content="2023-02-04T10:14:31.000Z">
+<meta property="article:modified_time" content="2023-02-04T12:58:57.924Z">
 <meta property="article:author" content="KK">
-<meta property="article:tag" content="live2d">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/linux.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>向hexo添加2D虚拟人物 - KK&#39;s Blog</title>
+  <title>Linux - KK&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -197,13 +199,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/LuGuang.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/dragon3.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="向hexo添加2D虚拟人物"></span>
+            <span id="subtitle" data-typed-text="Linux"></span>
           
         </div>
 
@@ -214,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-24 19:27" pubdate>
-          2022年11月24日 晚上
+        <time datetime="2023-02-04 18:14" pubdate>
+          2023年2月4日 晚上
         </time>
       </span>
     
@@ -227,7 +229,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          943 字
+          368 字
         
       </span>
     
@@ -239,7 +241,7 @@
         
         
           <!-- compatible with older versions-->
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -278,15 +280,32 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">向hexo添加2D虚拟人物</h1>
+            <h1 style="display: none">Linux</h1>
             
             
               <div class="markdown-body">
                 
-                <p>参考: <a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md">https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md</a></p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># git</span><br>$ npm i -g yarn<br><br>&gt; yarn@1.22.19 preinstall C:\Users\K\AppData\Roaming\npm\node_modules\yarn    <br>&gt; :; (node ./preinstall.js &gt; /dev/null 2&gt;&amp;1 || <span class="hljs-literal">true</span>)<br><br>C:\Users\K\AppData\Roaming\npm\yarn -&gt; C:\Users\K\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js<br>C:\Users\K\AppData\Roaming\npm\yarnpkg -&gt; C:\Users\K\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js<br>+ yarn@1.22.19<br>added 1 package <span class="hljs-keyword">in</span> 209.637s<br><br><span class="hljs-comment"># cmd</span><br>&gt;yarn version<br>yarn version v1.22.19<br>info Current version: 0.0.0<br>question New version:<br>Done <span class="hljs-keyword">in</span> 12.04s.<br><br>&gt;yarn -v<br>1.22.19<br><br>&gt;yarn add hexo-helper-live2d<br>yarn add v1.22.19<br>info No lockfile found.<br>[1/4] Resolving packages...<br>warning <br>...<br>[4/4] Building fresh packages...<br>success Saved lockfile.<br>success Saved 413 new dependencies.<br>info Direct dependencies<br>├─ hexo-deployer-git@3.0.0<br>├─ ...<br>└─ yallist@3.1.1<br>Done <span class="hljs-keyword">in</span> 221.38s.<br></code></pre></td></tr></table></figure>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>看板娘安装</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm install <span class="hljs-comment">--save live2d-widget-model-koharu</span><br></code></pre></td></tr></table></figure>
+                <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44262126/article/details/108217320">参考笔记</a></p>
+<h1 id="0-VM-CentOS"><a href="#0-VM-CentOS" class="headerlink" title="0 VM CentOS"></a>0 VM CentOS</h1><blockquote>
+<p>环境  <code>VMWare 16.2</code>   <code>CentOS 8.5</code></p>
+</blockquote>
+<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><p> <img src="E:/Ty/md/img/image-20230204183333348.png" srcset="/img/loading.gif" lazyload alt="image-20230204183333348"></p>
+<p><img src="E:/Ty/md/img/image-20230204183418771.png" srcset="/img/loading.gif" lazyload alt="image-20230204183418771" width=50% /><img src="E:/Ty/md/img/image-20230204183436550.png" srcset="/img/loading.gif" lazyload alt="image-20230204183436550" width=50% /><img src="E:/Ty/md/img/image-20230204183455168.png" srcset="/img/loading.gif" lazyload alt="image-20230204183455168" width=50% /><img src="E:/Ty/md/img/image-20230204183707509.png" srcset="/img/loading.gif" lazyload alt="image-20230204183707509" width=50% /><img src="E:/Ty/md/img/image-20230204183916666.png" srcset="/img/loading.gif" lazyload alt="image-20230204183916666" width=50% /><img src="E:/Ty/md/img/image-20230204183935071.png" srcset="/img/loading.gif" lazyload alt="image-20230204183935071" width=50% /><img src="E:/Ty/md/img/image-20230204183947796.png" srcset="/img/loading.gif" lazyload alt="image-20230204183947796" width=50% /><img src="E:/Ty/md/img/image-20230204184008316.png" srcset="/img/loading.gif" lazyload alt="image-20230204184008316" width=50% /><img src="E:/Ty/md/img/image-20230204184032630.png" srcset="/img/loading.gif" lazyload alt="image-20230204184032630" width=50% /><img src="E:/Ty/md/img/image-20230204184047771.png" srcset="/img/loading.gif" lazyload alt="image-20230204184047771" width=50% /><img src="E:/Ty/md/img/image-20230204184214195.png" srcset="/img/loading.gif" lazyload alt="image-20230204184214195" width=50% /><img src="E:/Ty/md/img/image-20230204184231661-1675507934147-1.png" srcset="/img/loading.gif" lazyload alt="image-20230204184231661" width=50% /><img src="E:/Ty/md/img/image-20230204184707182.png" srcset="/img/loading.gif" lazyload alt="image-20230204184707182" width=50% /><img src="E:/Ty/md/img/image-20230204184604106-1675511278167-9.png" srcset="/img/loading.gif" lazyload alt="image-20230204184604106" width=50% /></p>
+<p>引用 <code>iso</code> 镜像文件前确保 <code>已启用虚拟化</code>    <code>自定义硬件</code>中引用后点完成 / 点完成后在 <code>虚拟机设置</code> 中引用</p>
+<p><img src="E:/Ty/md/img/image-20230204184444846.png" srcset="/img/loading.gif" lazyload alt="image-20230204184444846" width=50% /><img src="E:/Ty/md/img/image-20230204184748060.png" srcset="/img/loading.gif" lazyload alt="image-20230204184748060" width=50% /></p>
+<h2 id="安装CentOS"><a href="#安装CentOS" class="headerlink" title="安装CentOS"></a>安装CentOS</h2><p><img src="E:/Ty/md/img/image-20230204193015657.png" srcset="/img/loading.gif" lazyload alt="image-20230204193015657" width=50% /><img src="E:/Ty/md/img/image-20230204185449393.png" srcset="/img/loading.gif" lazyload alt="image-20230204185449393" width=50% /><img src="E:/Ty/md/img/image-20230204193554030.png" srcset="/img/loading.gif" lazyload alt="image-20230204193554030" width=50% /><img src="E:/Ty/md/img/image-20230204185525202.png" srcset="/img/loading.gif" lazyload alt="image-20230204185525202" width=50% /><img src="E:/Ty/md/img/image-20230204190158845.png" srcset="/img/loading.gif" lazyload alt="image-20230204190158845" width=50% /><img src="E:/Ty/md/img/image-20230204190335581.png" srcset="/img/loading.gif" lazyload alt="image-20230204190335581" width=50% /><img src="E:/Ty/md/img/image-20230204190826378.png" srcset="/img/loading.gif" lazyload alt="image-20230204190826378" width=50% /><img src="E:/Ty/md/img/image-20230204191008721.png" srcset="/img/loading.gif" lazyload alt="image-20230204191008721" width=50% /><img src="E:/Ty/md/img/image-20230204191129347-1675510451740-5.png" srcset="/img/loading.gif" lazyload alt="image-20230204191129347" width=50% /><img src="E:/Ty/md/img/image-20230204192122125.png" srcset="/img/loading.gif" lazyload alt="image-20230204192122125" width=50% /></p>
+<p>KDUMP-实际服务器中需启用，但自己做测试可以先禁用以节省资源</p>
+<blockquote>
+<p>安装界面显示不全，因为屏幕分辨率未被正确识别，要关闭虚拟机修改显示器设置，选择本机真实屏幕分辨率重启安装（重启后要重新走以上步骤）<br><img src="E:/Ty/md/img/image-20230204192720597.png" srcset="/img/loading.gif" lazyload alt="image-20230204192720597" width=50% /><img src="E:/Ty/md/img/image-20230204192717600.png" srcset="/img/loading.gif" lazyload alt="image-20230204192717600" width=50% /></p>
+</blockquote>
+<p><img src="E:/Ty/md/img/image-20230204193832775.png" srcset="/img/loading.gif" lazyload alt="image-20230204193832775" width=50% /><img src="E:/Ty/md/img/image-20230204194018979.png" srcset="/img/loading.gif" lazyload alt="image-20230204194018979" width=50% /><img src="E:/Ty/md/img/image-20230204194303003.png" srcset="/img/loading.gif" lazyload alt="image-20230204194303003" width=50% /><img src="E:/Ty/md/img/image-20230204194519385.png" srcset="/img/loading.gif" lazyload alt="image-20230204194519385" width=50% /><img src="E:/Ty/md/img/image-20230204195851209.png" srcset="/img/loading.gif" lazyload alt="image-20230204195851209" width=50% /><img src="E:/Ty/md/img/image-20230204195928424.png" srcset="/img/loading.gif" lazyload alt="image-20230204195928424" width=50%  /><img src="E:/Ty/md/img/image-20230204195937488.png" srcset="/img/loading.gif" lazyload alt="image-20230204195937488" width=50% /><img src="E:/Ty/md/img/image-20230204195947460.png" srcset="/img/loading.gif" lazyload alt="image-20230204195947460" width=50% /><img src="E:/Ty/md/img/image-20230204200013512.png" srcset="/img/loading.gif" lazyload alt="image-20230204200013512" width=50% /><img src="E:/Ty/md/img/image-20230204200527438.png" srcset="/img/loading.gif" lazyload alt="image-20230204200527438" width=50% /></p>
+<p>重启虚拟机 登录 检查网络</p>
+<p>CentOS 8.5 刚登入时如下图 桌面没有文件 右键没有终端 要自行配置</p>
+<p><img src="E:/Ty/md/img/image-20230204202259819.png" srcset="/img/loading.gif" lazyload alt="image-20230204202259819" width=50% /><img src="E:/Ty/md/img/image-20230204204210896.png" srcset="/img/loading.gif" lazyload alt="image-20230204204210896" width=50% /></p>
+<p><code>计算机</code> 位于 <code>其他位置</code></p>
+<p><img src="E:/Ty/md/img/image-20230204205808263.png" srcset="/img/loading.gif" lazyload alt="image-20230204205808263" width=50% /><img src="E:/Ty/md/img/image-20230204205827017.png" srcset="/img/loading.gif" lazyload alt="image-20230204205827017" width=50% /></p>
+<h1 id="1-网络连接的3种形式"><a href="#1-网络连接的3种形式" class="headerlink" title="1 网络连接的3种形式"></a>1 网络连接的3种形式</h1><h1 id="2-Linux世界里-一切皆文件"><a href="#2-Linux世界里-一切皆文件" class="headerlink" title="2 Linux世界里 一切皆文件"></a>2 Linux世界里 一切皆文件</h1><p>文件颜色<br>绿色    可执行文件，可执行的程序<br>红色    压缩文件或者包文件<br>蓝色    目录<br>白色    一般性文件，如文本文件，配置文件，源码文件等<br>浅蓝色    链接文件，主要是使用ln命令建立的文件<br>红色闪烁    链接的文件有问题<br>黄色    设备文件<br>灰色    其他文件</p>
+
                 
               </div>
             
@@ -298,7 +317,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/live2d/">#live2d</a>
+        <a href="/tags/Linux/">#Linux</a>
       
     </div>
   
@@ -310,8 +329,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>向hexo添加2D虚拟人物</div>
-      <div>http://example.com/2022/11/24/向hexo添加2D虚拟人物/</div>
+      <div>Linux</div>
+      <div>http://example.com/2023/02/04/Linux/</div>
     </div>
     <div class="license-meta">
       
@@ -323,7 +342,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年11月24日</div>
+          <div>2023年2月4日</div>
         </div>
       
       
@@ -355,18 +374,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/03/TyporaImg/" title="Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/01/VPN/" title="Google Chrome插件使用梯子">
-                        <span class="hidden-mobile">Google Chrome插件使用梯子</span>
+                      <a href="/2023/02/03/TyporaImg/" title="Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传">
+                        <span class="hidden-mobile">Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
