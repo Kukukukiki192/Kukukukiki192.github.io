@@ -16,16 +16,16 @@
   <meta name="author" content="KK">
   <meta name="keywords" content="">
   
-    <meta name="description" content="参考笔记 0 VM CentOS 环境  VMWare 16.2   CentOS 8.5  创建虚拟机   引用 iso 镜像文件前确保 已启用虚拟化    自定义硬件中引用后点完成 &#x2F; 点完成后在 虚拟机设置 中引用  安装CentOS KDUMP-实际服务器中需启用，但自己做测试可以先禁用以节省资源  安装界面显示不全，因为屏幕分辨率未被正确识别，要关闭虚拟机修改显示器设置，选择本机真实屏幕">
+    <meta name="description" content="参考笔记 0 VM CentOS 环境  VMWare 16.2   CentOS 8.5  创建虚拟机   (vm名称之后重命名为hadoop100)  引用 iso 镜像文件前确保 已启用虚拟化    自定义硬件中引用后点完成 &#x2F; 点完成后在 虚拟机设置 中引用  安装CentOS KDUMP-实际服务器中需启用，但自己做测试可以先禁用以节省资源  安装界面显示不全，因为屏幕分辨率未被正确识别">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux">
 <meta property="og:url" content="http://example.com/2023/02/04/Linux/index.html">
 <meta property="og:site_name" content="KK&#39;s Blog">
-<meta property="og:description" content="参考笔记 0 VM CentOS 环境  VMWare 16.2   CentOS 8.5  创建虚拟机   引用 iso 镜像文件前确保 已启用虚拟化    自定义硬件中引用后点完成 &#x2F; 点完成后在 虚拟机设置 中引用  安装CentOS KDUMP-实际服务器中需启用，但自己做测试可以先禁用以节省资源  安装界面显示不全，因为屏幕分辨率未被正确识别，要关闭虚拟机修改显示器设置，选择本机真实屏幕">
+<meta property="og:description" content="参考笔记 0 VM CentOS 环境  VMWare 16.2   CentOS 8.5  创建虚拟机   (vm名称之后重命名为hadoop100)  引用 iso 镜像文件前确保 已启用虚拟化    自定义硬件中引用后点完成 &#x2F; 点完成后在 虚拟机设置 中引用  安装CentOS KDUMP-实际服务器中需启用，但自己做测试可以先禁用以节省资源  安装界面显示不全，因为屏幕分辨率未被正确识别">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/linux.png">
 <meta property="article:published_time" content="2023-02-04T10:14:31.000Z">
-<meta property="article:modified_time" content="2023-02-04T12:58:57.924Z">
+<meta property="article:modified_time" content="2023-02-06T13:29:29.469Z">
 <meta property="article:author" content="KK">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -229,7 +229,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          368 字
+          754 字
         
       </span>
     
@@ -241,7 +241,7 @@
         
         
           <!-- compatible with older versions-->
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -290,7 +290,9 @@
 <p>环境  <code>VMWare 16.2</code>   <code>CentOS 8.5</code></p>
 </blockquote>
 <h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><p> <img src="E:/Ty/md/img/image-20230204183333348.png" srcset="/img/loading.gif" lazyload alt="image-20230204183333348"></p>
-<p><img src="E:/Ty/md/img/image-20230204183418771.png" srcset="/img/loading.gif" lazyload alt="image-20230204183418771" width=50% /><img src="E:/Ty/md/img/image-20230204183436550.png" srcset="/img/loading.gif" lazyload alt="image-20230204183436550" width=50% /><img src="E:/Ty/md/img/image-20230204183455168.png" srcset="/img/loading.gif" lazyload alt="image-20230204183455168" width=50% /><img src="E:/Ty/md/img/image-20230204183707509.png" srcset="/img/loading.gif" lazyload alt="image-20230204183707509" width=50% /><img src="E:/Ty/md/img/image-20230204183916666.png" srcset="/img/loading.gif" lazyload alt="image-20230204183916666" width=50% /><img src="E:/Ty/md/img/image-20230204183935071.png" srcset="/img/loading.gif" lazyload alt="image-20230204183935071" width=50% /><img src="E:/Ty/md/img/image-20230204183947796.png" srcset="/img/loading.gif" lazyload alt="image-20230204183947796" width=50% /><img src="E:/Ty/md/img/image-20230204184008316.png" srcset="/img/loading.gif" lazyload alt="image-20230204184008316" width=50% /><img src="E:/Ty/md/img/image-20230204184032630.png" srcset="/img/loading.gif" lazyload alt="image-20230204184032630" width=50% /><img src="E:/Ty/md/img/image-20230204184047771.png" srcset="/img/loading.gif" lazyload alt="image-20230204184047771" width=50% /><img src="E:/Ty/md/img/image-20230204184214195.png" srcset="/img/loading.gif" lazyload alt="image-20230204184214195" width=50% /><img src="E:/Ty/md/img/image-20230204184231661-1675507934147-1.png" srcset="/img/loading.gif" lazyload alt="image-20230204184231661" width=50% /><img src="E:/Ty/md/img/image-20230204184707182.png" srcset="/img/loading.gif" lazyload alt="image-20230204184707182" width=50% /><img src="E:/Ty/md/img/image-20230204184604106-1675511278167-9.png" srcset="/img/loading.gif" lazyload alt="image-20230204184604106" width=50% /></p>
+<p><img src="E:/Ty/md/img/image-20230204183418771.png" srcset="/img/loading.gif" lazyload alt="image-20230204183418771" width=50% /><img src="E:/Ty/md/img/image-20230204183436550.png" srcset="/img/loading.gif" lazyload alt="image-20230204183436550" width=50% /><img src="E:/Ty/md/img/image-20230204183455168.png" srcset="/img/loading.gif" lazyload alt="image-20230204183455168" width=50% /><img src="E:/Ty/md/img/image-20230204183707509.png" srcset="/img/loading.gif" lazyload alt="image-20230204183707509" width=50% /></p>
+<p>(vm名称之后重命名为hadoop100)</p>
+<p><img src="E:/Ty/md/img/image-20230204183916666.png" srcset="/img/loading.gif" lazyload alt="image-20230204183916666" width=50% /><img src="E:/Ty/md/img/image-20230204183935071.png" srcset="/img/loading.gif" lazyload alt="image-20230204183935071" width=50% /><img src="E:/Ty/md/img/image-20230204183947796.png" srcset="/img/loading.gif" lazyload alt="image-20230204183947796" width=50% /><img src="E:/Ty/md/img/image-20230204184008316.png" srcset="/img/loading.gif" lazyload alt="image-20230204184008316" width=50% /><img src="E:/Ty/md/img/image-20230204184032630.png" srcset="/img/loading.gif" lazyload alt="image-20230204184032630" width=50% /><img src="E:/Ty/md/img/image-20230204184047771.png" srcset="/img/loading.gif" lazyload alt="image-20230204184047771" width=50% /><img src="E:/Ty/md/img/image-20230204184214195.png" srcset="/img/loading.gif" lazyload alt="image-20230204184214195" width=50% /><img src="E:/Ty/md/img/image-20230204184231661-1675507934147-1.png" srcset="/img/loading.gif" lazyload alt="image-20230204184231661" width=50% /><img src="E:/Ty/md/img/image-20230204184707182.png" srcset="/img/loading.gif" lazyload alt="image-20230204184707182" width=50% /><img src="E:/Ty/md/img/image-20230204184604106-1675511278167-9.png" srcset="/img/loading.gif" lazyload alt="image-20230204184604106" width=50% /></p>
 <p>引用 <code>iso</code> 镜像文件前确保 <code>已启用虚拟化</code>    <code>自定义硬件</code>中引用后点完成 / 点完成后在 <code>虚拟机设置</code> 中引用</p>
 <p><img src="E:/Ty/md/img/image-20230204184444846.png" srcset="/img/loading.gif" lazyload alt="image-20230204184444846" width=50% /><img src="E:/Ty/md/img/image-20230204184748060.png" srcset="/img/loading.gif" lazyload alt="image-20230204184748060" width=50% /></p>
 <h2 id="安装CentOS"><a href="#安装CentOS" class="headerlink" title="安装CentOS"></a>安装CentOS</h2><p><img src="E:/Ty/md/img/image-20230204193015657.png" srcset="/img/loading.gif" lazyload alt="image-20230204193015657" width=50% /><img src="E:/Ty/md/img/image-20230204185449393.png" srcset="/img/loading.gif" lazyload alt="image-20230204185449393" width=50% /><img src="E:/Ty/md/img/image-20230204193554030.png" srcset="/img/loading.gif" lazyload alt="image-20230204193554030" width=50% /><img src="E:/Ty/md/img/image-20230204185525202.png" srcset="/img/loading.gif" lazyload alt="image-20230204185525202" width=50% /><img src="E:/Ty/md/img/image-20230204190158845.png" srcset="/img/loading.gif" lazyload alt="image-20230204190158845" width=50% /><img src="E:/Ty/md/img/image-20230204190335581.png" srcset="/img/loading.gif" lazyload alt="image-20230204190335581" width=50% /><img src="E:/Ty/md/img/image-20230204190826378.png" srcset="/img/loading.gif" lazyload alt="image-20230204190826378" width=50% /><img src="E:/Ty/md/img/image-20230204191008721.png" srcset="/img/loading.gif" lazyload alt="image-20230204191008721" width=50% /><img src="E:/Ty/md/img/image-20230204191129347-1675510451740-5.png" srcset="/img/loading.gif" lazyload alt="image-20230204191129347" width=50% /><img src="E:/Ty/md/img/image-20230204192122125.png" srcset="/img/loading.gif" lazyload alt="image-20230204192122125" width=50% /></p>
@@ -300,11 +302,34 @@
 </blockquote>
 <p><img src="E:/Ty/md/img/image-20230204193832775.png" srcset="/img/loading.gif" lazyload alt="image-20230204193832775" width=50% /><img src="E:/Ty/md/img/image-20230204194018979.png" srcset="/img/loading.gif" lazyload alt="image-20230204194018979" width=50% /><img src="E:/Ty/md/img/image-20230204194303003.png" srcset="/img/loading.gif" lazyload alt="image-20230204194303003" width=50% /><img src="E:/Ty/md/img/image-20230204194519385.png" srcset="/img/loading.gif" lazyload alt="image-20230204194519385" width=50% /><img src="E:/Ty/md/img/image-20230204195851209.png" srcset="/img/loading.gif" lazyload alt="image-20230204195851209" width=50% /><img src="E:/Ty/md/img/image-20230204195928424.png" srcset="/img/loading.gif" lazyload alt="image-20230204195928424" width=50%  /><img src="E:/Ty/md/img/image-20230204195937488.png" srcset="/img/loading.gif" lazyload alt="image-20230204195937488" width=50% /><img src="E:/Ty/md/img/image-20230204195947460.png" srcset="/img/loading.gif" lazyload alt="image-20230204195947460" width=50% /><img src="E:/Ty/md/img/image-20230204200013512.png" srcset="/img/loading.gif" lazyload alt="image-20230204200013512" width=50% /><img src="E:/Ty/md/img/image-20230204200527438.png" srcset="/img/loading.gif" lazyload alt="image-20230204200527438" width=50% /></p>
 <p>重启虚拟机 登录 检查网络</p>
-<p>CentOS 8.5 刚登入时如下图 桌面没有文件 右键没有终端 要自行配置</p>
-<p><img src="E:/Ty/md/img/image-20230204202259819.png" srcset="/img/loading.gif" lazyload alt="image-20230204202259819" width=50% /><img src="E:/Ty/md/img/image-20230204204210896.png" srcset="/img/loading.gif" lazyload alt="image-20230204204210896" width=50% /></p>
-<p><code>计算机</code> 位于 <code>其他位置</code></p>
+<hr>
+<p>进入 <code>Centos8.5</code> 系统后，发现桌面上没有任何图标而且右键没有终端/新建等操作，即使使用终端新建一些文件，也无法在桌面上显示</p>
+<p><code>Centos7</code>默认为<code>X11</code>桌面版本，但是<code>Centos8</code>默认为<code>Wayland</code>，此时需要更换桌面版本，然后就能正常显示了</p>
+<p><img src="E:/Ty/md/img/image-20230204202259819.png" srcset="/img/loading.gif" lazyload alt="image-20230204202259819" width=50% /><img src="E:/Ty/md/img/image-20230206201402473.png" srcset="/img/loading.gif" lazyload alt="image-20230206201402473" width=50% /></p>
+<p><img src="E:/Ty/md/img/image-20230206201802954-1675686295564-1.png" srcset="/img/loading.gif" lazyload alt="image-20230206201802954" width=50%/><img src="E:/Ty/md/img/image-20230204204210896.png" srcset="/img/loading.gif" lazyload alt="image-20230204204210896" width=50% /></p>
+<p><code>计算机</code> 位于 <code>其他位置</code>    配置打开终端快捷键 ↑</p>
 <p><img src="E:/Ty/md/img/image-20230204205808263.png" srcset="/img/loading.gif" lazyload alt="image-20230204205808263" width=50% /><img src="E:/Ty/md/img/image-20230204205827017.png" srcset="/img/loading.gif" lazyload alt="image-20230204205827017" width=50% /></p>
-<h1 id="1-网络连接的3种形式"><a href="#1-网络连接的3种形式" class="headerlink" title="1 网络连接的3种形式"></a>1 网络连接的3种形式</h1><h1 id="2-Linux世界里-一切皆文件"><a href="#2-Linux世界里-一切皆文件" class="headerlink" title="2 Linux世界里 一切皆文件"></a>2 Linux世界里 一切皆文件</h1><p>文件颜色<br>绿色    可执行文件，可执行的程序<br>红色    压缩文件或者包文件<br>蓝色    目录<br>白色    一般性文件，如文本文件，配置文件，源码文件等<br>浅蓝色    链接文件，主要是使用ln命令建立的文件<br>红色闪烁    链接的文件有问题<br>黄色    设备文件<br>灰色    其他文件</p>
+<p>添加共享文件夹    Windows <code>D:\vm\share\</code>    Linux  <code>/mnt/hgfs/share</code></p>
+<p><img src="E:/Ty/md/img/image-20230206193811434.png" srcset="/img/loading.gif" lazyload alt="image-20230206193811434" width=50% /><img src="E:/Ty/md/img/image-20230206202721065.png" srcset="/img/loading.gif" lazyload alt="image-20230206202721065" width=50% /></p>
+<p>为方便使用，在桌面创建共享文件夹快捷方式</p>
+<img src="E:/Ty/md/img/image-20230206202222959.png" srcset="/img/loading.gif" lazyload alt="image-20230206202222959" width=50% />
+
+<h2 id="远程登录-Linux-系统"><a href="#远程登录-Linux-系统" class="headerlink" title="远程登录 Linux 系统"></a>远程登录 Linux 系统</h2><p>测试 Windows 和 Linux 是否相通：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">ifconfig <span class="hljs-comment">#network interfaces configuring网络接口配置 功能描述：显示所有网络接口的配置信息</span><br>ping 目的主机 <span class="hljs-comment">#功能描述：测试当前服务器是否可以连接目的主机</span><br></code></pre></td></tr></table></figure>
+
+<p>在 Linux 下 <code>ifconfig</code> 查看当前网络 IP     在 Windows 下 <code>ping</code> Linux 的 IP 地址<img src="E:/Ty/md/img/image-20230206204532820.png" srcset="/img/loading.gif" lazyload alt="image-20230206204532820" width=50% /><img src="E:/Ty/md/img/image-20230206204524902.png" srcset="/img/loading.gif" lazyload alt="image-20230206204524902" width=50% /></p>
+<p>设置中也可以查看 Linux 的 IP 地址</p>
+<p><img src="E:/Ty/md/img/image-20230206204955972.png" srcset="/img/loading.gif" lazyload alt="image-20230206204955972" width=50% /><img src="E:/Ty/md/img/image-20230206204948425.png" srcset="/img/loading.gif" lazyload alt="image-20230206204948425" width=50% /></p>
+<p>XShell 连接虚拟机：</p>
+<p><img src="E:/Ty/md/img/image-20230206205936968.png" srcset="/img/loading.gif" lazyload alt="image-20230206205936968"></p>
+<p><img src="E:/Ty/md/img/image-20230206210938410.png" srcset="/img/loading.gif" lazyload alt="image-20230206210938410"></p>
+<p><img src="E:/Ty/md/img/image-20230206211020893.png" srcset="/img/loading.gif" lazyload alt="image-20230206211020893"></p>
+<p><img src="E:/Ty/md/img/1625500041853-a39edcc8-6467-4306-a29c-7e55fc85d01b.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="E:/Ty/md/img/image-20230206212458911.png" srcset="/img/loading.gif" lazyload alt="image-20230206212458911"></p>
+<p><img src="E:/Ty/md/img/image-20230206212928450.png" srcset="/img/loading.gif" lazyload alt="image-20230206212928450"></p>
+<h1 id="1-网络连接的3种形式"><a href="#1-网络连接的3种形式" class="headerlink" title="1 网络连接的3种形式"></a>1 网络连接的3种形式</h1><p><img src="E:/Ty/md/img/1625496025387-c7b6019a-8b3c-4d6a-95f3-a8321d7d2aff.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="E:/Ty/md/img/1625496806099-b615c090-c0fc-4e92-aff1-2e84e5595cf2.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h1 id="2-Linux世界里-一切皆文件"><a href="#2-Linux世界里-一切皆文件" class="headerlink" title="2 Linux世界里 一切皆文件"></a>2 Linux世界里 一切皆文件</h1><p>文件颜色<br>绿色    可执行文件，可执行的程序<br>红色    压缩文件或者包文件<br>蓝色    目录<br>白色    一般性文件，如文本文件，配置文件，源码文件等<br>浅蓝色    链接文件，主要是使用ln命令建立的文件<br>红色闪烁    链接的文件有问题<br>黄色    设备文件<br>灰色    其他文件</p>
 
                 
               </div>
