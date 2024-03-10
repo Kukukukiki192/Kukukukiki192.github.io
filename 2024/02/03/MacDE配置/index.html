@@ -1,0 +1,955 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/I.png">
+  <link rel="icon" href="/img/I.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="KK">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Homebrew 参考：Mac包管理器Homebrew的安装方法  自动脚本(全部国内地址)1234# 安装&#x2F;bin&#x2F;zsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)&quot;# 卸载&#x2F;bin&#x2F;zsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MacOS开发环境配置">
+<meta property="og:url" content="http://example.com/2024/02/03/MacDE%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="KK&#39;s Blog">
+<meta property="og:description" content="Homebrew 参考：Mac包管理器Homebrew的安装方法  自动脚本(全部国内地址)1234# 安装&#x2F;bin&#x2F;zsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)&quot;# 卸载&#x2F;bin&#x2F;zsh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.c">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE35.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE1.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE2.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE36.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE37.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE38.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE3.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE39.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE40.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE4.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE5.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE6.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE7.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE8.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE9.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE10.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE11.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE12.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE13.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE14.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE15.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE16.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE17.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE18.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE19.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE20.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE21.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE22.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE23.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE24.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE25.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE26.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE27.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE28.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE29.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE30.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE31.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE32.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE33.png">
+<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE34.png">
+<meta property="article:published_time" content="2024-02-03T11:53:10.000Z">
+<meta property="article:modified_time" content="2024-03-04T14:36:15.430Z">
+<meta property="article:author" content="KK">
+<meta property="article:tag" content="MacOS">
+<meta property="article:tag" content="Homebrew">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Typora">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="VMware">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE35.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>MacOS开发环境配置 - KK&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/toubudaziji.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KK&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/dragon.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="MacOS开发环境配置"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-02-03 19:53" pubdate>
+          2024年2月3日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          2.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          7 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">MacOS开发环境配置</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.jb51.net/article/253389.htm">Mac包管理器Homebrew的安装方法</a></p>
+</blockquote>
+<h2 id="自动脚本-全部国内地址"><a href="#自动脚本-全部国内地址" class="headerlink" title="自动脚本(全部国内地址)"></a>自动脚本(全部国内地址)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装</span><br>/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)</span>&quot;</span><br><span class="hljs-comment"># 卸载</span><br>/bin/zsh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE35.png" srcset="/img/loading.gif" lazyload alt="MacDE35"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim ~/.zshrc <span class="hljs-comment"># 配置homebrew环境变量</span><br><span class="hljs-built_in">export</span> HOMEBREW_HOME=/opt/homebrew<br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$HOMEBREW_HOME</span>/bin<br><span class="hljs-built_in">source</span> ～/.zshrc <span class="hljs-comment"># 使环境变量生效</span><br></code></pre></td></tr></table></figure>
+
+<p>fix：后来 <code>echo $PATH</code> 检查输出包含了两次 <code>/opt/homebrew/bin</code>，重复写入了，删掉 <code>~/.zshrc</code> 中写入 <code>$PATH</code> 的路径. XXX_HOME不用删方便查看软件安装路径</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE1.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>在 <code>$PATH</code> 中包含了 <code>/opt/homebrew/bin</code> 时，你已经拥有了 Homebrew 默认安装目录的权限，用 <code>which pkg_name</code> 命令检查若能够成功返回软件的可执行文件路径，则无需再手动添加软件的二进制文件路径到 <code>$PATH</code> 中，Homebrew 会为你管理这一切</p>
+</blockquote>
+<h2 id="默认-shell"><a href="#默认-shell" class="headerlink" title="默认 shell"></a>默认 shell</h2><p>若编辑的文件是<code>.bash_profile</code>，而关闭终端后发现每次重新打开终端都需要重新运行 <code>source ~/.bash_profile</code>，是因为 shell 配置文件没有在每次打开终端时自动加载</p>
+<p>在 macOS 中，默认的终端应该在启动时自动加载 <code>.bash_profile</code>，但如果使用 Zsh 作为默认 shell，而环境变量配置写到了 <code>.bash_profile</code> 中，这可能导致 Zsh 无法读取到这些配置. Zsh 通常会读取 <code>~/.zshrc</code> 文件来加载配置</p>
+<p>解决方法：</p>
+<ol>
+<li><p>把环境变量配置写到 <code>.zshrc</code> 中</p>
+</li>
+<li><p>若想继续使用 <code>.bash_profile</code> 来管理环境变量，可在文件末尾添加一行来加载 <code>.zshrc</code>：</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">if</span> [ -f ~/.zshrc ]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">source</span> ~/.zshrc<br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>把默认 shell 换成 bash，重启终端生效</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHELL</span> <span class="hljs-comment"># 检查当前终端使用的默认 shell</span><br><span class="hljs-built_in">cat</span> /etc/shells <span class="hljs-comment"># 查看系统上安装的可用 shell</span><br>chsh -s /path/to/new/shell <span class="hljs-comment"># 更改默认 shell</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE2.png" srcset="/img/loading.gif" lazyload></p>
+<p><code>The default interactive shell is now zsh.</code> 提示是 macOS 10.15 Catalina 版本以后默认切换到了 zsh 作为默认的 shell 后显示的.</p>
+<blockquote>
+<p>Zsh（Z Shell）是Bash的一个强大的替代品，它提供了更好的命令补全、历史记录管理等功能. 它还支持用插件和脚本扩展其功能. 因此，将Zsh设置为默认Shell可以大大提高操作便利性和效率.</p>
+</blockquote>
+<p>看起来zsh更好用，换回来</p>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE36.png" srcset="/img/loading.gif" lazyload alt="MacDE36"></p>
+<p><code>Error: Checksum mismatch.</code> 报错原因：Homebrew目录下的<code>portable-ruby-2.6.3_2.yosemite.bottle.tar.gz</code>文件引起的安装中断<br>解决方法：删掉对应路径文件，重新执行安装命令即可</p>
+<hr>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE37.png" srcset="/img/loading.gif" lazyload alt="MacDE37"></p>
+<p>安装 Core、Cask、services 时失败或卡住，按 <code>ctrl-c</code> 中断脚本执行 <code>git clone</code> 命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(brew --repo)</span>/Library/Taps/&quot;</span><br><span class="hljs-built_in">mkdir</span> homebrew &amp;&amp; <span class="hljs-built_in">cd</span> homebrew<br>git <span class="hljs-built_in">clone</span> git://mirrors.ustc.edu.cn/homebrew-xxx.git<br><span class="hljs-comment"># eg.</span><br>k@KMac-mini ~ % <span class="hljs-built_in">cd</span> /opt/homebrew/Library/Taps/homebrew<br>k@KMac-mini homebrew % <span class="hljs-built_in">ls</span><br>homebrew-cask		homebrew-core		homebrew-services<br>k@KMac-mini homebrew % sudo <span class="hljs-built_in">rm</span> -rf homebrew-cask<br>Password:<br>k@KMac-mini homebrew % sudo git <span class="hljs-built_in">clone</span> https://mirrors.ustc.edu.cn/homebrew-cask.git<br>Cloning into <span class="hljs-string">&#x27;homebrew-cask&#x27;</span>...<br>remote: Enumerating objects: 913406, <span class="hljs-keyword">done</span>.<br>remote: Total 913406 (delta 0), reused 0 (delta 0), pack-reused 913406<br>Receiving objects: 100% (913406/913406), 440.35 MiB | 835.00 KiB/s, <span class="hljs-keyword">done</span>.<br>Resolving deltas: 100% (664865/664865), <span class="hljs-keyword">done</span>.<br></code></pre></td></tr></table></figure>
+
+<p>成功后继续执行安装命令(即重新运行安装脚本)，Homebrew会检测到已安装的部分并继续安装未完成的部分(我的不行还是重装了)</p>
+<hr>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE38.png" srcset="/img/loading.gif" lazyload alt="MacDE38"></p>
+<p>原因是homebrew的根目录没有信任Homebrew&#x2F;homebrew-core (no Git repository)和Homebrew&#x2F;homebrew-cask (no Git repository)，直接按照提示运行这两个命令行即可.<br><strong>装Homebrew时会自动安装Git</strong></p>
+<h2 id="brew-命令"><a href="#brew-命令" class="headerlink" title="brew 命令"></a>brew 命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew -v <span class="hljs-comment"># 查看版本</span><br>brew update <span class="hljs-comment"># 更新brew版本</span><br>brew upgrade 软件名 <span class="hljs-comment"># 更新软件</span><br>brew search 软件名 <span class="hljs-comment"># 搜索</span><br>brew install 软件名 <span class="hljs-comment"># 安装</span><br>brew uninstall 软件名 <span class="hljs-comment"># 卸载</span><br>brew <span class="hljs-built_in">ls</span> <span class="hljs-comment"># 本地软件库列表</span><br>brew list <span class="hljs-comment"># 显示已安装软件</span><br>brew list 软件名 <span class="hljs-comment"># 查看软件的安装目录及其内容</span><br>brew info 软件名 <span class="hljs-comment"># 查看软件信息</span><br>brew home 软件名 <span class="hljs-comment"># 用浏览器打开官方网页查看软件信息</span><br>brew outdated <span class="hljs-comment"># 查看哪些已安装的程序需要更新</span><br>brew reps <span class="hljs-comment"># 显示包依赖</span><br>brew <span class="hljs-built_in">help</span> <span class="hljs-comment"># 显示帮助</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><ul>
+<li><p><strong>配置用户名和邮箱信息</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;username&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;email&quot;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>生成SSH Key</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;本人GitHub绑定的邮箱&quot;</span> <span class="hljs-comment"># 默认一路回车不要设置密码</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>在GitHub添加SSH Key</strong></p>
+<p><code>Settings</code>–<code>SSH and GPG keys</code>–<code>new SSH key</code> </p>
+<p>Title：自定义</p>
+<p>Key：填入<code>~/.ssh/id_rsa.pub</code>中生成的SSH Key字符串</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE3.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p><strong>验证配置</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE39.png" srcset="/img/loading.gif" lazyload alt="MacDE39"></p>
+</li>
+</ul>
+<h1 id="Java环境"><a href="#Java环境" class="headerlink" title="Java环境"></a>Java环境</h1><h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><ul>
+<li><p>机型 系统版本</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE40.png" srcset="/img/loading.gif" lazyload alt="MacDE40"></p>
+</li>
+<li><p>Homebrew安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install openjdk<br></code></pre></td></tr></table></figure>
+
+<p>(我用这个安装有点问题改成手动安装了)</p>
+</li>
+<li><p>手动安装</p>
+<p><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads">Java Download | Oracle</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE4.png" srcset="/img/loading.gif" lazyload></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/danxiaodeshitou/article/details/134258750">bin.zip  bin.tar.gz  src.zip  src.tar.gz  rpm  dmg 区别</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE5.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>环境变量配置</p>
+<p>除了从 <code>关于本机</code> 查看芯片类型，还能用 <code>uname -a</code> 查看Mac是macOS x64(Intel)还是macOS ARM64(M)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">java -version <span class="hljs-comment"># 验证安装</span><br>/usr/libexec/java_home -V <span class="hljs-comment"># 查看JDK安装路径</span><br><span class="hljs-comment"># 配置JDK环境变量</span><br><span class="hljs-built_in">export</span> JAVA21_HOME=/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home<br><span class="hljs-built_in">export</span> JAVA_HOME=<span class="hljs-variable">$JAVA21_HOME</span><br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$JAVA_HOME</span>/bin<br><span class="hljs-built_in">export</span> CLASSPATH=<span class="hljs-variable">$JAVA_HOME</span>/lib/tools.jar:<span class="hljs-variable">$JAVA_HOME</span>/lib/dt.jar:.<br><span class="hljs-built_in">alias</span> jdk21=<span class="hljs-string">&#x27;export JAVA_HOME=$JAVA21_HOME&#x27;</span><br><span class="hljs-comment"># 验证配置</span><br>java -version <span class="hljs-comment"># 检查Java版本</span><br>javac -version <span class="hljs-comment"># 检查Java编译器版本</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE6.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ul>
+<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><ul>
+<li><p>Homebrew安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install tomcat<br><span class="hljs-comment"># 启动Tomcat</span><br>catalina run <span class="hljs-comment"># 或</span><br>brew services start tomcat<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>手动安装</p>
+<p><a target="_blank" rel="noopener" href="https://c.biancheng.net/servlet2/tomcat-download.html">Tomcat下载和安装</a> <a target="_blank" rel="noopener" href="https://tomcat.apache.org/download-10.cgi">Apache Tomcat</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE7.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>环境变量配置</p>
+<p>(CSDN报错参考：“解压缩后，将文件放到library（即资源库）中，放到其他地方可能也行，但我放到其他地方在启动时会出错，因此参考了<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/0938b1e538f5?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes">Mac系统安装Tomcat终端出现-bash: startup.sh: command not found - 简书</a>，将文件放在了library里”）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> CATALINA_HOME=/Library/Tomcat/apache-tomcat-10.1.17<br><span class="hljs-built_in">export</span> PATH=..:<span class="hljs-variable">$CATALINA_HOME</span>/bin<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>验证启动 <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE8.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE9.png" srcset="/img/loading.gif" lazyload></p>
+<p><code>shutdown.sh</code> 关闭</p>
+</li>
+</ul>
+<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><ul>
+<li><p>手动安装</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/maven/maven-setup.html">Maven 环境配置</a></p>
+</li>
+<li><p>Homebrew安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install maven<br>mvn -v <span class="hljs-comment"># 验证Maven安装</span><br>brew list maven <span class="hljs-comment"># 查找Maven安装路径</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE10.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE11.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE12.png" srcset="/img/loading.gif" lazyload></p>
+<p>添加环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> MAVEN_HOME=/opt/homebrew/Cellar/maven/3.9.6<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>生成 <code>.m2</code> 文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mvn <span class="hljs-built_in">help</span>:system<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE13.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>配置中央仓库镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /opt/homebrew/Cellar/maven/3.9.6/libexec/conf <span class="hljs-comment"># 安装目录</span><br>vim settings.xml <span class="hljs-comment"># 编辑配置文件</span><br>&lt;mirrors&gt;<br>    &lt;mirror&gt;<br>        &lt;<span class="hljs-built_in">id</span>&gt;aliyun&lt;/id&gt;<br>        &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;<br>        &lt;name&gt;Aliyun Maven Central&lt;/name&gt;<br>        &lt;url&gt;https://maven.aliyun.com/repository/central&lt;/url&gt;<br>    &lt;/mirror&gt;<br>&lt;/mirrors&gt;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE14.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>配置本地仓库位置</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE15.png" srcset="/img/loading.gif" lazyload></p>
+<p>Maven 会使用默认路径 <code>~/.m2/repository</code></p>
+<blockquote>
+<p><code>settings.xml</code> 补充说明（<a target="_blank" rel="noopener" href="https://blog.csdn.net/pan_junbiao/article/details/104264644">原文</a>）：<br><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE16.png" srcset="/img/loading.gif" lazyload></p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://c.biancheng.net/maven2/idea-maven-config.html">IDEA配置Maven环境</a></p>
+<p>将本地安装的 Maven 配置到 IntelliJ IDEA 中，不用 IDEA 自带的 Maven</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE17.png" srcset="/img/loading.gif" lazyload></p>
+<p>免费的IDEA社区版创建不了SpringBoot项目 参考：<a target="_blank" rel="noopener" href="https://www.jb51.net/article/281303.htm">利用IDEA社区版创建SpringBoot项目的详细图文教程</a></p>
+</li>
+</ul>
+<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="安装过程-1"><a href="#安装过程-1" class="headerlink" title="安装过程"></a>安装过程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew search mysql<br>brew install mysql<br>brew services start mysql <span class="hljs-comment"># 启动MySQL服务</span><br>mysql_secure_installation <span class="hljs-comment"># 设置MySQL根密码 psw:11001100</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE18.png" srcset="/img/loading.gif" lazyload></p>
+<p>添加环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> MYSQL_HOME=/opt/homebrew/Cellar/mysql/8.2.0_1<br></code></pre></td></tr></table></figure>
+
+<h2 id="DataGrip连接MySQL"><a href="#DataGrip连接MySQL" class="headerlink" title="DataGrip连接MySQL"></a>DataGrip连接MySQL</h2><blockquote>
+<p>DataGrip激活：公众号-安哥说后端 <a target="_blank" rel="noopener" href="https://chenjunan.top/img/jetbra.zip">激活工具</a> <a target="_blank" rel="noopener" href="https://chenjunan.top/img/activate/datagrip-new.txt">datagrip激活码</a> <a href="www.bilibili.com/read/cv28362142">图文激活教程</a></p>
+</blockquote>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE19.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE20.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE21.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="Hexo配置"><a href="#Hexo配置" class="headerlink" title="Hexo配置"></a><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo配置</a></h1><p>前提：Git ✅ <a target="_blank" rel="noopener" href="https://www.runoob.com/nodejs/nodejs-tutorial.html">Node.js</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install node <span class="hljs-comment"># 安装node</span><br>node -v<br>npm -v<br>npm install hexo-cli -g <span class="hljs-comment"># 安装hexo</span><br>npm install hexo <span class="hljs-comment"># 熟悉npm的可仅局部安装hexo包</span><br>hexo -v<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE22.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/nodejs/nodejs-npm.html">NPM</a>是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install xx <span class="hljs-comment"># 本地安装</span><br>npm install -g xx <span class="hljs-comment"># 全局安装</span><br>npm uninstall xxx <span class="hljs-comment"># 卸裁模抉</span><br>npm update xx <span class="hljs-comment"># 更新模块</span><br>npm search xx <span class="hljs-comment"># 搜索模块</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>发布前配置好1️⃣ ssh_key ✅ 2️⃣ <code>_config.yml</code> 中 deploy 部分</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE23.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ~/Document/kblog<br>hexo init<br>npm install <span class="hljs-comment"># 根据package.json文件中的依赖项列表安装所有必要的包</span><br>hexo g <span class="hljs-comment"># 生成</span><br>hexo s <span class="hljs-comment"># 启动服务</span><br>npm install hexo-deployer-git --save <span class="hljs-comment"># 安装部署插件</span><br>hexo d <span class="hljs-comment"># 部署到github </span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Zhangxiaorui_9/article/details/79723288?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-79723288-blog-105105705.235%5Ev40%5Epc_relevant_anti_t3_base&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-79723288-blog-105105705.235%5Ev40%5Epc_relevant_anti_t3_base&utm_relevant_index=2">多台电脑操作hexo个人网站</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE24.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE25.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE26.png" srcset="/img/loading.gif" lazyload></p>
+<p>之后每次换电脑更新博客前先git pull</p>
+</li>
+</ul>
+<h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><p><a target="_blank" rel="noopener" href="https://typoraio.cn/">Typora官网</a> 下载后在<code>/Applications/Typora.app/Contents/Resources/TypeMark/page-dist/static/js</code> 路径下找到LicenseIndex开头的js文件，把<code>e.hasActivated=”true”==e.hasActivated</code> 改为 <code>e.hasActivated=”true”==”true”</code></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE27.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE28.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="图床配置"><a href="#图床配置" class="headerlink" title="图床配置"></a>图床配置</h2><p><a target="_blank" rel="noopener" href="https://kk1024.cool/2023/02/03/TyporaImg">Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传</a></p>
+<ul>
+<li><p>安装</p>
+<p>npm在本地安装PicGo-Core</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE29.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>配置</p>
+<p>交互式命令行配置并自动生成配置文件</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE30.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>Typora设置</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE31.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install picgo -g <span class="hljs-comment">#安装PicGo-Core</span><br>picgo <span class="hljs-built_in">set</span> uploader <span class="hljs-comment">#交互式命令行配置</span><br>picgo use uploader <span class="hljs-comment">#选择当前要使用的Uploader</span><br><span class="hljs-comment">#配置文件 ~/.picgo/config.json</span><br>&#123;<br>  <span class="hljs-string">&quot;picBed&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;uploader&quot;</span>: <span class="hljs-string">&quot;github&quot;</span>,  //当前默认上传图床<br>    <span class="hljs-string">&quot;current&quot;</span>: <span class="hljs-string">&quot;github&quot;</span>,<br>    <span class="hljs-string">&quot;github&quot;</span>: &#123;<br>      <span class="hljs-string">&quot;repo&quot;</span>: <span class="hljs-string">&quot;Kukukukiki192/TyporaImg&quot;</span>,  //自己的仓库名<br>      <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;main&quot;</span>,  //默认分支<br>      <span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-string">&quot;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&quot;</span>,  // github的token<br>      <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;img/&quot;</span>,  //自定义存储路径(仓库下新建文件夹，可为空)<br>      <span class="hljs-string">&quot;customUrl&quot;</span>: <span class="hljs-string">&quot;https://github.com/Kukukukiki192/TyporaImg/raw/main&quot;</span>  //自定义域名<br>      //https://github.com/[username]/[repo]/raw/[branch] 必须是该格式,不然用其它域名访问图片404本地加载失败<br>    &#125;,<br>    <span class="hljs-string">&quot;transformer&quot;</span>: <span class="hljs-string">&quot;path&quot;</span><br>  &#125;,<br>  <span class="hljs-string">&quot;picgoPlugins&quot;</span>: &#123;&#125;  // 为插件预留<br>&#125;<br><span class="hljs-comment">#上传的图片地址</span><br>https://raw.githubusercontent.com/Kukukukiki192/TyporaImg/main/img/icon_512x512.png<br>https://github.com/Kukukukiki192/TyporaImg/raw/main/img/icon_512x512.png<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="Dash"><a href="#Dash" class="headerlink" title="Dash"></a>Dash</h1><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE32.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/dc396a37ddee">Mac下的Pycharm教程</a></p>
+<p>anaconda &#x3D; python + （NumPy、SciPy 等常用第三方库 ）+ IDE</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE33.png" srcset="/img/loading.gif" lazyload></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/142657444">学习 python 必须弄懂的 Python、Pycharm、Anaconda 三者之间的关系</a></p>
+<p><a target="_blank" rel="noopener" href="https://m.py.cn/faq/python/15704.html">anaconda和python的区别</a></p>
+<p>安装新的python前要确保以前的卸载干净</p>
+<h1 id="VMware-Fusion"><a href="#VMware-Fusion" class="headerlink" title="VMware Fusion"></a>VMware Fusion</h1><p><a target="_blank" rel="noopener" href="https://my.vmware.com/web/vmware/evalcenter?p=fusion-player-personal">VMware Fusion英文官网</a>  针对个人用户免费 <a target="_blank" rel="noopener" href="https://github.com/Kukukukiki192/Info/blob/master/vmQ%26A">macOS安装VMware操作记录</a></p>
+<p>注册账号并申请序列号，必须用英文官网打开. 用goole chrome打开会自动跳转到中文网站，改用Safari才行. 按提示注册后，会出现序列号，复制出来，下载dmg文件安装时使用即可</p>
+<blockquote>
+<p>注：VMware12版本需要macOS11.0以上，此macOS10.13不能使用，需要安装VMware11.5</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://kb.vmware.com/s/article/2088571">MacOS系统版本和VMware各版本适配情况</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE34.png" srcset="/img/loading.gif" lazyload></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/MacOS/" class="print-no-link">#MacOS</a>
+      
+        <a href="/tags/Homebrew/" class="print-no-link">#Homebrew</a>
+      
+        <a href="/tags/Git/" class="print-no-link">#Git</a>
+      
+        <a href="/tags/Java/" class="print-no-link">#Java</a>
+      
+        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+        <a href="/tags/Typora/" class="print-no-link">#Typora</a>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+        <a href="/tags/VMware/" class="print-no-link">#VMware</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>MacOS开发环境配置</div>
+      <div>http://example.com/2024/02/03/MacDE配置/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>KK</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年2月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/02/04/WSL/" title="WSL">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">WSL</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/02/03/%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="Windows快捷键">
+                        <span class="hidden-mobile">Windows快捷键</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxingxing.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxuehua.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiantiao.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" srcset="/img/loading.gif" lazyload style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>

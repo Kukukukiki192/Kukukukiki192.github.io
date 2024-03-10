@@ -1,0 +1,1015 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/I.png">
+  <link rel="icon" href="/img/I.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="KK">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="CSDN问题记录_Bug  获取网站图标 直接在网址后加 &#x2F;favicon.ico 可获得大部分网站的图标，如     baidu.com&#x2F;favicon.ico    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    runoob.com&#x2F;favicon.ico           F12查看网页源代码h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="问题记录">
+<meta property="og:url" content="http://example.com/2023/09/13/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="KK&#39;s Blog">
+<meta property="og:description" content="CSDN问题记录_Bug  获取网站图标 直接在网址后加 &#x2F;favicon.ico 可获得大部分网站的图标，如     baidu.com&#x2F;favicon.ico    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    runoob.com&#x2F;favicon.ico           F12查看网页源代码h">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/bug.png">
+<meta property="article:published_time" content="2023-09-12T17:16:56.000Z">
+<meta property="article:modified_time" content="2024-03-10T17:25:40.942Z">
+<meta property="article:author" content="KK">
+<meta property="article:tag" content="bug">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/bug.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>问题记录 - KK&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bynotes/texiao/source/css/toubudaziji.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KK&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/mitsuki.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="问题记录"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-09-13 01:16" pubdate>
+          2023年9月13日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          3.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">问题记录</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43775855/category_11481883.html?spm=1001.2014.3001.5482">CSDN问题记录_Bug</a></p>
+</blockquote>
+<h1 id="获取网站图标"><a href="#获取网站图标" class="headerlink" title="获取网站图标"></a>获取网站图标</h1><ol>
+<li><p>直接在网址后加 <code>/favicon.ico</code> 可获得大部分网站的图标，如</p>
+<div align="left">
+   <a target="_blank" rel="noopener" href="https://www.baidu.com/favicon.ico">baidu.com/favicon.ico</a>
+   <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+   <a target="_blank" rel="noopener" href="https://www.runoob.com/favicon.ico">runoob.com/favicon.ico</a></br>
+   <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230413191006012.png" srcset="/img/loading.gif" lazyload width=35% />
+   <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230413191914276.png" srcset="/img/loading.gif" lazyload width=38%/>
+</div>
+</li>
+<li><p>F12查看网页源代码header标签</p>
+<div align="left">
+   <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230413191459468.png" srcset="/img/loading.gif" lazyload width=80%/>
+   <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230413191340704.png" srcset="/img/loading.gif" lazyload width=19%/>
+</div>
+
+
+
+<p>有的需要网站和图标链接拼接才能找到</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230413191605912.png" srcset="/img/loading.gif" lazyload/>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230413191726787.png" srcset="/img/loading.gif" lazyload/></li>
+</ol>
+<h1 id="公司里开发用的机器，虚拟机、网络、转发、ssh连接、远程桌面、远程开机……等一系列骚操作的操作概述"><a href="#公司里开发用的机器，虚拟机、网络、转发、ssh连接、远程桌面、远程开机……等一系列骚操作的操作概述" class="headerlink" title="公司里开发用的机器，虚拟机、网络、转发、ssh连接、远程桌面、远程开机……等一系列骚操作的操作概述"></a><a target="_blank" rel="noopener" href="http://www.taodudu.cc/news/show-4707756.html?action=onClick">公司里开发用的机器，虚拟机、网络、转发、ssh连接、远程桌面、远程开机……等一系列骚操作的操作概述</a></h1><h1 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h1><h2 id="没有右键打开终端功能"><a href="#没有右键打开终端功能" class="headerlink" title="没有右键打开终端功能"></a>没有右键打开终端功能</h2><p>可以通过<code>uTools App</code>的功能点击鼠标中键打开该路径下的终端</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug10.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="启动台App图标显示-‘❔’"><a href="#启动台App图标显示-‘❔’" class="headerlink" title="启动台App图标显示 ‘❔’"></a>启动台App图标显示 ‘❔’</h2><p>启动台上的App图标显示❔通常表示 macOS 无法找到或加载该应用程序. 这可能是由于应用程序文件损坏、删除或移动，或者与应用程序的关联数据出现问题导致的.</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug7.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug8.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">defaults write com.apple.dock ResetLaunchPad -bool TRUE <span class="hljs-comment"># 重置启动台</span><br>killall Dock <span class="hljs-comment"># 重启桌面</span><br></code></pre></td></tr></table></figure>
+
+<p>解决✅</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug9.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="以时间格式重命名图片"><a href="#以时间格式重命名图片" class="headerlink" title="以时间格式重命名图片"></a>以时间格式重命名图片</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://exiftool.org/">ExifTool官网</a>   <a target="_blank" rel="noopener" href="https://exiftool.org/exiftool_pod.html#writing_examples">exiftool Application Documentation</a></p>
+</blockquote>
+<p>使用 exiftool 工具更改文件名. 注意替换 <code>DIR</code> 路径，这将把指定目录下所有文件的文件名更改为类似 <code>20240202_123045-1.jpg</code> 的格式，其中包含了照片的创建日期和时间信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install exiftool<br>exiftool <span class="hljs-string">&#x27;-FileName&lt;CreateDate&#x27;</span> -d <span class="hljs-string">&quot;%Y%m%d_%H%M%S%%-c.%%e&quot;</span> DIR<br><span class="hljs-comment"># DateTimeOriginal图片原始拍摄时间 CreateDate图片创建时间 FileModifyDate图片修改时间 AllDates这3个tag的快捷方式tag</span><br><span class="hljs-comment"># -d	设置日期/时间的格式</span><br><span class="hljs-comment"># %Y%m%d_%H%M%S	具体的日期/时间组织格式</span><br><span class="hljs-comment"># %%-c	若拍摄日期和时间相同就添加一个顺序号</span><br><span class="hljs-comment"># %%e	保留原图片的扩展名</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/%E6%88%AA%E5%B1%8F2024-02-03%2012.00.49.png" srcset="/img/loading.gif" lazyload></p>
+<p>Q：<code>No writable tags set</code> 说明该照片没有tag <code>CreateDate</code>，不能被重命名</p>
+<p>A：参考 <a target="_blank" rel="noopener" href="https://exiftool.org/filename.html">Renaming and&#x2F;or Moving Files</a>，可使用其它的 <code>DateTimeOriginal</code> 或 <code>FileModifyDate</code> tag</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240203115522399.png" srcset="/img/loading.gif" lazyload></p>
+<p>为方便使用合适的时间tag批量重命名图片，用以下方式，tag往左覆盖有效</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240203131526301.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">exiftool -d <span class="hljs-string">&quot;%Y%m%d_%H%M%S%%-c.%%e&quot;</span> <span class="hljs-string">&#x27;-FileName&lt;FileModifyDate&#x27;</span> <span class="hljs-string">&#x27;-FileName&lt;CreateDate&#x27;</span> <span class="hljs-string">&#x27;-FileName&lt;DateTimeOriginal&#x27;</span>  DIR<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240205011925826.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240205143440097.png" srcset="/img/loading.gif" lazyload></p>
+<p>Q：用 exiftool 重命名截图后，显示的不是原始截图时间，而是编辑截图后的修改时间</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug11.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug12.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="相册拖出的照片原始拍摄时间会变为拷贝时间"><a href="#相册拖出的照片原始拍摄时间会变为拷贝时间" class="headerlink" title="相册拖出的照片原始拍摄时间会变为拷贝时间"></a>相册拖出的照片原始拍摄时间会变为拷贝时间</h2><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/Snipaste_2024-02-06_13-12-15.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/Snipaste_2024-02-06_13-15-04.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240206165706784.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="时间机器备份"><a href="#时间机器备份" class="headerlink" title="时间机器备份"></a>时间机器备份</h2><blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/596119469">macos下的容器、宗卷、分区的主要区别及硬盘分区建议</a>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/zjj778899/article/details/124911566?ops_request_misc=&request_id=&biz_id=102&utm_term=macos%E4%B8%8B%E7%9A%84%E5%AE%B9%E5%99%A8%E3%80%81%E5%AE%97%E5%8D%B7%E3%80%81%E5%88%86%E5%8C%BA%E7%9A%84%E5%8C%BA%E5%88%AB&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-124911566.142%5Ev99%5Epc_search_result_base6&spm=1018.2226.3001.4187">Mac磁盘格式化、分区教程</a></p>
+</blockquote>
+<p>先抹掉磁盘，格式选择适用于<code>macOS</code>的<code>APFS</code></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug13.png" srcset="/img/loading.gif" lazyload> </p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug14.png" srcset="/img/loading.gif" lazyload></p>
+<p>设置时间机器备份的大小为Mac硬盘的1.5倍，可做一份备份多点空余</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug15.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug16.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug17.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug18.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug19.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug20.png" srcset="/img/loading.gif" lazyload></p>
+<p>自动备份太多了，我选择手动备份 点<code>+</code>选择不备份的文件</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug21.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug22.png" srcset="/img/loading.gif" lazyload></p>
+<p>添加<code>Windows</code>分区，选择<code>ExFAT</code>格式</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug23.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug24.png" srcset="/img/loading.gif" lazyload></p>
+<p>备份完成✅ 第一次比较久，之后会在有更改的情况下追加备份，未更改部分不动</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug25.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug26.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="域名网站在其他浏览器上显示为安全连接，但在Safari上显示不安全"><a href="#域名网站在其他浏览器上显示为安全连接，但在Safari上显示不安全" class="headerlink" title="域名网站在其他浏览器上显示为安全连接，但在Safari上显示不安全"></a>域名网站在其他浏览器上显示为安全连接，但在Safari上显示不安全</h2><div>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug53.png" srcset="/img/loading.gif" lazyload /><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug52.png" srcset="/img/loading.gif" lazyload />
+</div>
+
+<blockquote>
+<p>ChatGPT</p>
+</blockquote>
+<p>如果你的个人博客在其他浏览器上显示为安全连接，但在Safari上显示为不安全，这可能有几个原因。以下是一些可能的解决方法：</p>
+<ol>
+<li><p><strong>SSL证书问题</strong>：首先，请确保你的网站已经安装了有效的SSL证书，并且证书没有过期。Safari通常对SSL证书的要求比较严格，如果证书存在问题，Safari可能会标记网站为不安全。检查证书是否配置正确，是否与你的域名匹配，是否没有过期，并确保SSL证书的链条是完整的。</p>
+</li>
+<li><p><strong>混合内容问题</strong>：Safari通常不允许在安全连接上加载不安全的混合内容，如HTTP资源。确保你的网站上没有不安全的资源，如不安全的图像、CSS或JavaScript文件。所有资源都应该使用HTTPS。</p>
+</li>
+<li><p><strong>HSTS（HTTP Strict Transport Security）设置</strong>：如果你的网站使用了HSTS来强制使用HTTPS连接，确保这个设置已正确配置。HSTS设置可让浏览器自动将HTTP请求重定向到HTTPS，提高安全性。</p>
+</li>
+<li><p><strong>证书链问题</strong>：检查你的SSL证书是否使用了正确的证书链。有时，证书链配置不正确可能导致Safari无法验证证书的有效性。</p>
+</li>
+<li><p><strong>Safari缓存问题</strong>：有时Safari可能会缓存旧的证书信息，导致显示为不安全。尝试清除Safari浏览器缓存，然后重新加载你的网站。</p>
+</li>
+<li><p><strong>CSP（内容安全策略）问题</strong>：内容安全策略是一种用于增加网站安全性的机制，但如果配置不正确，也可能导致问题。确保你的CSP设置不会阻止加载你的资源或其他必要的内容。</p>
+</li>
+<li><p><strong>检查错误信息</strong>：当访问你的网站时，在Safari上查看错误信息或控制台日志，以获取更多关于问题的信息。这可以帮助你更容易地诊断和解决问题。</p>
+</li>
+</ol>
+<p>最重要的是，确保你的网站的所有组件都是安全的，并且你的SSL证书和相关设置都是正确的。如果你不确定如何解决问题，你可以联系你的主机提供商或SSL证书提供商以获取支持。</p>
+<blockquote>
+<p>Baidu</p>
+</blockquote>
+<p>Safari提示网站不安全是因为要保护您的安全和隐私，网站必须使用强加密才能提供安全的 Web 连接。如果 Safari 提示无法建立安全连接，或网站使用的是弱加密，就会出现这样的提示。要解决此问题，网站管理员应将服务器配置为安全设置</p>
+<h2 id="Safari浏览器整个网页截图"><a href="#Safari浏览器整个网页截图" class="headerlink" title="Safari浏览器整个网页截图"></a>Safari浏览器整个网页截图</h2><p>快捷键 <code>⌘⌥i（win-alt-i）</code> 打开开发者工具，在<code>&lt;html</code>开头的第一行右键选择「捕捉截屏」</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug51.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="Win"><a href="#Win" class="headerlink" title="Win"></a>Win</h1><h2 id="C盘清理步骤"><a href="#C盘清理步骤" class="headerlink" title="C盘清理步骤"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43775855/article/details/128374402">C盘清理步骤</a></h2><h2 id="隐藏任务栏语言图标"><a href="#隐藏任务栏语言图标" class="headerlink" title="隐藏任务栏语言图标"></a>隐藏任务栏语言图标</h2><p><code>win-i</code> 打开设置</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240114102639400.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240114102457373.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="查看系统版本号"><a href="#查看系统版本号" class="headerlink" title="查看系统版本号"></a>查看系统版本号</h2><p>此电脑–右键–&gt;属性</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug1.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug34.png" srcset="/img/loading.gif" lazyload width=60%/>
+
+<p>用户变量：对该用户起作用，其它用户登录则不起作用</p>
+<p>系统变量：对所有用户起作用</p>
+<p><code>echo %Path% //查看环境变量</code></p>
+<p>用户环境变量会接在系统环境变量后面</p>
+<p>强调：正常对于环境变量，系统会检查<strong>用户</strong>环境变量，之后再检查<strong>系统</strong>环境变量，如果有相同的变量名，并不会将两者的内容合并在一起</p>
+<p>path 和 classpath 的作用：</p>
+<ul>
+<li>运行路径 path 变量记录的是<strong>各个程序所在的路径</strong>，系统根据这个变量的值来查找运行程序（各种命令），使得在运行的时候不用输入全路径名</li>
+<li>类路径 classpath 环境变量通常用来记录<strong>当前路径和java类库所在的路径</strong>. 在类库中包含java系统所提供的各种软件包，其中包括各个类和接口等</li>
+</ul>
+<h2 id="Win自动更新问题"><a href="#Win自动更新问题" class="headerlink" title="Win自动更新问题"></a>Win自动更新问题</h2><p>Q：系统更新后虚拟机启动蓝屏 卸载更新重启时又自动配置</p>
+<p>A：此电脑-&gt;右键-管理</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug4.png" srcset="/img/loading.gif" lazyload></p>
+<p>只设置这个没用</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug5.PNG" srcset="/img/loading.gif" lazyload width=50%/>
+
+<p>此电脑-&gt;右键-属性-&gt;高级系统设置</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug6.PNG" srcset="/img/loading.gif" lazyload width=50%/>
+
+<p>又设置了这2个 有用 不知道是哪个有用</p>
+<h2 id="蓝屏PAGE-FAULT-IN-NONPAGED-AREA解决方法"><a href="#蓝屏PAGE-FAULT-IN-NONPAGED-AREA解决方法" class="headerlink" title="蓝屏PAGE_FAULT_IN_NONPAGED_AREA解决方法"></a><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/0aa2237516bb1988cc0d64dd.html">蓝屏PAGE_FAULT_IN_NONPAGED_AREA解决方法</a></h2><p>虚拟机同时启动2个就蓝屏，已安装更新又卸载不了，最后用第2个方法解决了</p>
+<p>关闭快速启动</p>
+<ol>
+<li><p>任务栏右击电源图标，选择弹出菜单的【电源选项】</p>
+<p><img src="https://exp-picture.cdn.bcebos.com/a007a9b1eef97fbd0bd92807b74133bad2413339.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1/format,f_jpg/quality,q_80" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>在打开的【电源选项】界面左侧点击【选择关闭盖子的功能】或【选择电源按钮的功能】选项</p>
+<p><img src="https://exp-picture.cdn.bcebos.com/c8373cbc7dc5cf6779fac9f28e96b814f5d02639.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1/format,f_jpg/quality,q_80" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>在打开的界面点击【更改当前不可用的设置】，然后取消【启用快速启动】的选中状态，点击【保存修改】，然后重新启动就行了</p>
+<p><img src="https://exp-picture.cdn.bcebos.com/f591ab03c8d246fe1debde37b8bf3bef344f1e39.jpg?x-bce-process=image/resize,m_lfit,w_500,limit_1/format,f_jpg/quality,q_80" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ol>
+<h2 id="Win邮件绑定Google邮箱"><a href="#Win邮件绑定Google邮箱" class="headerlink" title="Win邮件绑定Google邮箱"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_47573148/article/details/125828694">Win邮件绑定Google邮箱</a></h2><p>选择最下面<strong>高级设置</strong>，不是<strong>Google</strong>！</p>
+ <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230414021434743.png" srcset="/img/loading.gif" lazyload style="zoom:67%;" />
+
+<table>
+<thead>
+<tr>
+<th>传入电子邮件服务器</th>
+<th>imap.gmail.com:993:1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>传出（SMTP）电子邮件服务器</strong></td>
+<td><strong>smtp.gmail.com:465:1</strong></td>
+</tr>
+</tbody></table>
+<h2 id="Word默认无格式粘贴"><a href="#Word默认无格式粘贴" class="headerlink" title="Word默认无格式粘贴"></a>Word默认无格式粘贴</h2><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug2.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="XShell显示左栏"><a href="#XShell显示左栏" class="headerlink" title="XShell显示左栏"></a>XShell显示左栏</h2> <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug3.jpeg" srcset="/img/loading.gif" lazyload width=30%/>
+
+<h2 id="华为电脑管家-AI字幕-语音输入"><a href="#华为电脑管家-AI字幕-语音输入" class="headerlink" title="华为电脑管家 + AI字幕 | 语音输入"></a>华为电脑管家 + AI字幕 | 语音输入</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YY411p7rE/?spm_id_from=pageDriver&vd_source=dd0980ff81f8ea802fcb0d5ee60569c0">【智慧语音安装教程】非华为电脑 | 华为电脑管家12.0版本 | 智慧语音功能安装教程 | AI字幕 | 语音输入</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug29.png" srcset="/img/loading.gif" lazyload width=40%/><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug30.png" srcset="/img/loading.gif" lazyload width=40%/></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug31.png" srcset="/img/loading.gif" lazyload width=60%/><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug32.png" srcset="/img/loading.gif" lazyload width=40%/></p>
+<p>退出电脑管家重启 有了</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug33.png" srcset="/img/loading.gif" lazyload width=30%/>
+
+<h1 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="Win10使用clash开启代理后仍然无法proxy上网的问题"><a href="#Win10使用clash开启代理后仍然无法proxy上网的问题" class="headerlink" title="Win10使用clash开启代理后仍然无法proxy上网的问题"></a><a target="_blank" rel="noopener" href="https://www.likecs.com/show-440349.html">Win10使用clash开启代理后仍然无法proxy上网的问题</a></h2><p>win+r -&gt; <code>wt</code> -&gt; <code>netsh winsock reset</code> 回车 -&gt; 重启电脑生效 -&gt; 开clash换节点多试几次 ok</p>
+<h2 id="同一wifi手机连上能上网电脑连上却没网"><a href="#同一wifi手机连上能上网电脑连上却没网" class="headerlink" title="同一wifi手机连上能上网电脑连上却没网"></a>同一wifi手机连上能上网电脑连上却没网</h2><p>手机能上网说明wifi没问题,应是电脑配置不当导致</p>
+<ol>
+<li><p>关闭[代理]选项卡</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230912235859895.png" srcset="/img/loading.gif" lazyload/>
+
+<p>解决<strong>√</strong>   <code>127.0.0.1:7890</code>是代理使用的端口号</p>
+</li>
+<li><p>重置网络</p>
+<p>管理员身份运行cmd: <code>netsh winsock reset</code> 重启电脑生效 或 在设置中重置网络:</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230913000102430.png" srcset="/img/loading.gif" lazyload/></li>
+</ol>
+<p>其它方法参考 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/538964900">知乎_同一个Wifi无线网络手机能上但是电脑不能上网的解决方法</a></p>
+<h2 id="下载出错-无法连接到代理服务器-127-0-0-1-7890"><a href="#下载出错-无法连接到代理服务器-127-0-0-1-7890" class="headerlink" title="下载出错: 无法连接到代理服务器 127.0.0.1:7890"></a>下载出错: 无法连接到代理服务器 127.0.0.1:7890</h2><p>问题:</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230730044631579.png" srcset="/img/loading.gif" lazyload width=60%/>
+
+<p>原因:</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230730050633987.png" srcset="/img/loading.gif" lazyload width=70%/>
+
+<p>解决: 更新chrome后解决</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230730050804331.png" srcset="/img/loading.gif" lazyload width=60%/>
+
+<p>取消勾选  未解决</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230730045131441.png" srcset="/img/loading.gif" lazyload width=60%/>
+
+<p>确认防火墙设置允许IDM从互联网下载文件–将IDM下载软件添加进允许的应用 未解决</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230730045848410.png" srcset="/img/loading.gif" lazyload/>
+
+<h2 id="Snapdrop传输文件时不能连VPN否则连接不上设备"><a href="#Snapdrop传输文件时不能连VPN否则连接不上设备" class="headerlink" title="Snapdrop传输文件时不能连VPN否则连接不上设备"></a>Snapdrop传输文件时不能连VPN否则连接不上设备</h2><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230730064748192.png" srcset="/img/loading.gif" lazyload width=70%/>
+
+<p>同理一些国内app连着VPN也登陆不了&#x2F;功能受限&#x2F;加载不出，断开VPN就好了</p>
+<p>还有手环之前连了iPad后iPhone就连不上了是以下原因:</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230730201047087.png" srcset="/img/loading.gif" lazyload/>
+
+<h2 id="ChatGPT访问不了"><a href="#ChatGPT访问不了" class="headerlink" title="ChatGPT访问不了"></a>ChatGPT访问不了</h2><p>提示: Sorry, you have been blocked</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230714194345434.png" srcset="/img/loading.gif" lazyload width=80%/>
+
+<p>无法连接问题:</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230715003929256.png" srcset="/img/loading.gif" lazyload width=70%/>
+
+<p>清除浏览器缓存并重启浏览器  &#x2F; 刷新缓存:</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230715004256393.png" srcset="/img/loading.gif" lazyload width=50%/>
+
+<h2 id="IOS端ChatGPT"><a href="#IOS端ChatGPT" class="headerlink" title="IOS端ChatGPT"></a>IOS端ChatGPT</h2><p>注意: VPN要选择全局模式,否则访问不了   虚拟在线号码接收短信服务: <a target="_blank" rel="noopener" href="https://sms-activate.org/cn">https://sms-activate.org/cn</a> </p>
+<p>OpenAI注册ChatGPT: <a target="_blank" rel="noopener" href="https://openai.com/">https://openai.com/</a> PC端注册过则IOS端直接登录就行</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230726220355315.png" srcset="/img/loading.gif" lazyload/>
+
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230726220418928.png" srcset="/img/loading.gif" lazyload/>
+
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230726221123949.png" srcset="/img/loading.gif" lazyload/>
+
+<div align="center"><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230728134527715.png" srcset="/img/loading.gif" lazyload width=70%/></div>
+
+<h2 id="IP地址显示为其他省份"><a href="#IP地址显示为其他省份" class="headerlink" title="IP地址显示为其他省份"></a>IP地址显示为其他省份</h2><p>人在浙江却显示为江苏  IP查询网站：<a target="_blank" rel="noopener" href="https://www.ip138.com/">iP138.com</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug42.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug43.png" srcset="/img/loading.gif" lazyload></p>
+<p>可能原因：</p>
+<ul>
+<li><p>动态IP所致</p>
+<p>这是由于ISP（互联网服务提供商）的网络结构导致的. 为了节约IP资源，ISP会采用临时随机分配IP方法来提供服务. 当您的ISP更改了您的IP地址，新的IP地址可能会位于另一个省份</p>
+</li>
+<li><p>地理位置数据错误</p>
+<p>IP地址归属地信息通常存储在地理位置数据库中，有时ISP的数据库可能存在错误，导致IP地址与实际地理位置不符</p>
+</li>
+<li><p>虚拟专用网络（VPN）</p>
+<p>如果您使用了VPN服务，您的IP地址会显示为VPN服务器的位置</p>
+</li>
+<li><p>黑客攻击</p>
+<p>如果您的IP地址被黑客攻击或恶意软件感染，黑客可能会在您的设备上安装代理或篡改程序，以便将您的IP地址路由到其他省份</p>
+</li>
+</ul>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug44.png" srcset="/img/loading.gif" lazyload><br><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug45.png" srcset="/img/loading.gif" lazyload><br><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug46.png" srcset="/img/loading.gif" lazyload><br><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug47.png" srcset="/img/loading.gif" lazyload></p>
+<p><code>192.168.0.1</code>是一个常见的私有IP地址，通常用作家庭或办公网络中的路由器管理界面的默认IP地址</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug48.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h1><h2 id="Chrome浏览器截图"><a href="#Chrome浏览器截图" class="headerlink" title="Chrome浏览器截图"></a>Chrome浏览器截图</h2><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230926131145110.png" srcset="/img/loading.gif" lazyload style="zoom: 40%;" />
+
+<p>Mac 快捷键： <code>⌘⌥i	win-alt-i</code> 开发者工具 <code>⌘⇧p	win-shift-p</code> 运行命令</p>
+<p>可以设置语言,要运行命令最好用英文</p>
+<div>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230926131106343.png" srcset="/img/loading.gif" lazyload width=40%/><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230926131750715.png" srcset="/img/loading.gif" lazyload width=50% />
+</div>
+
+<p>自定义快捷键不起作用?</p>
+<h2 id="取消Chrome浏览器自动重置"><a href="#取消Chrome浏览器自动重置" class="headerlink" title="取消Chrome浏览器自动重置"></a>取消Chrome浏览器自动重置</h2><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230414184833315.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="html文档无法通过Chrome浏览器打开"><a href="#html文档无法通过Chrome浏览器打开" class="headerlink" title="html文档无法通过Chrome浏览器打开"></a>html文档无法通过Chrome浏览器打开</h2><p> 默认ME浏览器,打开方式中没有Chrome浏览器</p>
+ <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230418022249480.png" srcset="/img/loading.gif" lazyload/>
+
+<p>win11默认应用设置中没有 <code>.html</code> 文件类型</p>
+<div>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230418014859604.png" srcset="/img/loading.gif" lazyload width=20% /><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230418014956916.png" srcset="/img/loading.gif" lazyload width=30% />
+</div>
+
+<ol>
+<li><p>通过复制路径到Chrome搜索框打开</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230418014739677.png" srcset="/img/loading.gif" lazyload style="zoom:67%;" />
+</li>
+<li><p>在Chrome中按 <code>Ctrl + O</code> 快捷键浏览文件打开</p>
+ <div>
+ <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230418022134854.png" srcset="/img/loading.gif" lazyload width=60% /><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230418022155613.png" srcset="/img/loading.gif" lazyload width=38% />
+ </div>   
+</li>
+<li><p>打开方式选择Chrome</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230418022431097.png" srcset="/img/loading.gif" lazyload style="zoom:75%;" /></li>
+</ol>
+<h2 id="解决谷歌翻译不能用的方法"><a href="#解决谷歌翻译不能用的方法" class="headerlink" title="解决谷歌翻译不能用的方法"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/571190754?utm_id=0">解决谷歌翻译不能用的方法</a></h2><p>换成作者给的第1个ip就行 打开stackoverflow检查🆗了 </p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230418065836126.png" srcset="/img/loading.gif" lazyload style="zoom:80%;" />
+
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230418065801529.png" srcset="/img/loading.gif" lazyload/>
+
+<h2 id="解决网盘下载太慢问题"><a href="#解决网盘下载太慢问题" class="headerlink" title="解决网盘下载太慢问题"></a>解决网盘下载太慢问题</h2><h3 id="百度网盘加速"><a href="#百度网盘加速" class="headerlink" title="百度网盘加速"></a>百度网盘加速</h3><p>使用chrome扩展程序 <code>篡改猴Beta版</code> 加载 <code>百度网盘批量下载</code> 脚本 + <code>Motrix</code> 批量下载工具</p>
+<p><a target="_blank" rel="noopener" href="https://motrix.app/">Motrix官网</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug27.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug28.png" srcset="/img/loading.gif" lazyload></p>
+<p>扩展程序安装：<a target="_blank" rel="noopener" href="https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4%E6%B5%8B%E8%AF%95%E7%89%88/gcalenpjmijncebpfijmoaglllgpjagf?hl=zh-CN&utm_source=ext_sidebar">篡改猴测试版</a>  脚本管理器</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug35.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug36.png" srcset="/img/loading.gif" lazyload></p>
+<p><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN">Greasy Fork</a> 脚本网站</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug37.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug38.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug39.png" srcset="/img/loading.gif" lazyload></p>
+<p>和百度网盘、夸克网盘下载速度对比</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug40.png" srcset="/img/loading.gif" lazyload></p>
+<p>若Motrix下载变慢，打开<code>偏好设置-进阶设置-Tracker服务器</code>选择有CDN加速的7个服务器，之后点击<code>保存并应用</code>即可</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug41.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="各种网盘加速"><a href="#各种网盘加速" class="headerlink" title="各种网盘加速"></a>各种网盘加速</h3><p>参考 <a target="_blank" rel="noopener" href="https://www.youxiaohou.com/zh-cn/">网盘直链下载助手_油小猴</a></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug54.png" srcset="/img/loading.gif" lazyload></p>
+<p>使用chrome扩展程序 <code>篡改猴Beta版</code> 加载 <code>网盘直链下载助手</code> 脚本 + <code>Motrix</code> 批量下载工具</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug55.png" srcset="/img/loading.gif" lazyload></p>
+<p>需要配置相应参数，然后推送到 <code>Motrix</code> 中下载</p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug56.png" srcset="/img/loading.gif" lazyload style="zoom:67%;" />
+
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug57.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><h2 id="GitHub预览html页面"><a href="#GitHub预览html页面" class="headerlink" title="GitHub预览html页面"></a>GitHub预览html页面</h2><p>原页面 </p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230915202610254.png" srcset="/img/loading.gif" lazyload></p>
+<p>在地址前加 <code>raw.githack.com</code> 预览</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230915202752408.png" srcset="/img/loading.gif" lazyload></p>
+<p>若仓库已发布, 直接在域名仓库名链接后加入对应的html相对路径即可</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230915202956938.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="为什么GitHub有的md文件不能预览"><a href="#为什么GitHub有的md文件不能预览" class="headerlink" title="为什么GitHub有的md文件不能预览"></a>为什么GitHub有的md文件不能预览</h2><p><a target="_blank" rel="noopener" href="https://q.cnblogs.com/q/143786/">博客园提问</a>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43775855/article/details/132683332?spm=1001.2014.3001.5501">CSDN提问</a></p>
+<h1 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a>IDEA</h1><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/z_ssyy/article/details/130288021">30多款好用的IDEA插件</a></p>
+<p>CSDN tools  </p>
+<p>LeetCode Editor  </p>
+<p>Material Theme UI (主题) + Atom Material Icons(突出文件类型图标识别)</p>
+<p>Scala  </p>
+<p>JetBrains Academy  </p>
+<p>Alibaba Java Coding Guidelines</p>
+<p>Grep console (自定义控制台打印日志颜色)</p>
+<h2 id="LeetCode插件login-with-cookie"><a href="#LeetCode插件login-with-cookie" class="headerlink" title="LeetCode插件login with cookie"></a>LeetCode插件login with cookie</h2><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug50.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="使用LeetCode插件并调试本地样例"><a href="#使用LeetCode插件并调试本地样例" class="headerlink" title="使用LeetCode插件并调试本地样例"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/HFish24/article/details/105419304/">使用LeetCode插件并调试本地样例</a></h2><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230904193422471.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230904193252220.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//Code FileName</span><br>[$!&#123;question.frontendQuestionId&#125;]$&#123;question.title&#125;<br><span class="hljs-comment">//改为:</span><br>P$!&#123;question.frontendQuestionId&#125;_$!velocityTool.camelCaseName($&#123;question.titleSlug&#125;)\<br>    <br><span class="hljs-comment">//Code Template</span><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">  * 题目Id：$&#123;question.frontendQuestionId&#125;</span><br><span class="hljs-comment">  * 题目：$&#123;question.title&#125;</span><br><span class="hljs-comment">  * 日期：$!velocityTool.date()</span><br><span class="hljs-comment">  */</span><br>$&#123;question.content&#125;<br><span class="hljs-keyword">package</span> leetcode.editor.cn;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">$</span>!velocityTool.camelCaseName($&#123;question.titleSlug&#125;) &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Solution</span> <span class="hljs-variable">solution</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">$</span>!velocityTool.camelCaseName($&#123;question.titleSlug&#125;)().<span class="hljs-keyword">new</span> <span class="hljs-title class_">Solution</span>();<br>        System.out.println(<span class="hljs-string">&quot;Hello world&quot;</span>);<br>    &#125;<br>    $&#123;question.code&#125;<br>&#125;<br><span class="hljs-comment">//改为:</span><br>$&#123;question.content&#125;<br><span class="hljs-keyword">package</span> leetcode.editor.cn;<br><span class="hljs-comment">//Java：$&#123;question.title&#125;</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">P$</span>&#123;question.frontendQuestionId&#125;_$!velocityTool.camelCaseName($&#123;question.titleSlug&#125;)&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>       <span class="hljs-type">Solution</span> <span class="hljs-variable">solution</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">P$</span>!&#123;question.frontendQuestionId&#125;_$!velocityTool.camelCaseName($&#123;question.titleSlug&#125;)****().<span class="hljs-keyword">new</span> <span class="hljs-title class_">Solution</span>();<br>        <span class="hljs-comment">// TO TEST</span><br>    &#125;<br>    $&#123;question.code&#125;<br>&#125;<br><br><span class="hljs-comment">//Template Constant</span><br>$&#123;question.title&#125;	题目标题	示例:两数之和<br>$&#123;question.titleSlug&#125;	题目标记	示例:two-sum<br>$&#123;question.frontendQuestionId&#125;	题目编号<br>$&#123;question.content&#125;	题目描述<br>$&#123;question.code&#125;	题目代码<br>$!velocityTool.camelCaseName(str)	转换字符为大驼峰样式（开头字母大写）<br>$!velocityTool.smallCamelCaseName(str)	转换字符为小驼峰样式（开头字母小写）<br>$!velocityTool.snakeCaseName(str)	转换字符为蛇形样式<br>$!velocityTool.leftPadZeros(str,n)	在字符串的左边填充<span class="hljs-number">0</span>，使字符串的长度至少为n<br>$!velocityTool.date()	获取当前时间<br></code></pre></td></tr></table></figure>
+
+<h2 id="配置-JDK"><a href="#配置-JDK" class="headerlink" title="配置 JDK"></a>配置 JDK</h2><p>File -&gt; Project Structure -&gt;  SDKS 选择</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230904195518436.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="配置-Tomcat"><a href="#配置-Tomcat" class="headerlink" title="配置 Tomcat"></a>配置 Tomcat</h2><p>Run -&gt; Edit Configurations</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug49.png" srcset="/img/loading.gif" lazyload></p>
+<p>注: 一般开发springring企业级web服务器端项目需要IDEA的企业版，IDEA社区版默认是不能直接创建springboot项目，但IDEA可以通过自定义配置，创建springboot-web项目</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/bug/" class="print-no-link">#bug</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>问题记录</div>
+      <div>http://example.com/2023/09/13/问题记录/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>KK</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年9月13日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/02/03/%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="Windows快捷键">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Windows快捷键</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/02/04/Linux/" title="Linux">
+                        <span class="hidden-mobile">Linux</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxingxing.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiaoxuehua.js"></script>
+<script src="//cdn.jsdelivr.net/gh/bynotes/texiao/source/js/xiantiao.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" srcset="/img/loading.gif" lazyload style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
