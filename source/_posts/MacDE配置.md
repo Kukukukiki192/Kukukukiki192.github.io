@@ -1,5 +1,5 @@
 ---
-title: MacOS开发环境配置
+title: macOS开发环境配置
 date: 2024-02-03 19:53:10
 tags: [MacOS, Homebrew, Git, Java, MySQL, Hexo, Typora, Python, VMware]
 banner_img: /img/dragon.jpg
@@ -21,12 +21,15 @@ banner_img: /img/dragon.jpg
 
 ![MacDE35](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE35.png)
 
+`~/.zshrc`
+
 ```bash
-vim ~/.zshrc # 配置homebrew环境变量
+# 配置homebrew环境变量
 export HOMEBREW_HOME=/opt/homebrew
 export PATH=$PATH:$HOMEBREW_HOME/bin
-source ～/.zshrc # 使环境变量生效
 ```
+
+❗<font color=red>每次修改完配置文件都要通过 `source ～/.zshrc` 重新加载或者重启终端，使配置生效</font>
 
 fix：后来 `echo $PATH` 检查输出包含了两次 `/opt/homebrew/bin`，重复写入了，删掉 `~/.zshrc` 中写入 `$PATH` 的路径. XXX_HOME不用删方便查看软件安装路径
 
@@ -44,29 +47,29 @@ fix：后来 `echo $PATH` 检查输出包含了两次 `/opt/homebrew/bin`，重�
 
 1. 把环境变量配置写到 `.zshrc` 中
 
-2. 若想继续使用 `.bash_profile` 来管理环境变量，可在文件末尾添加一行来加载 `.zshrc`：
+2. 若想继续使用 `.bash_profile` 来管理环境变量，可在文件末尾添加一行来加载
 
-```bash
-if [ -f ~/.zshrc ]; then
-    source ~/.zshrc
-fi
-```
-
+    ```bash
+    if [ -f ~/.zshrc ]; then
+        source ~/.zshrc
+    fi
+    ```
+    
 3. 把默认 shell 换成 bash，重启终端生效
 
-```bash
-echo $SHELL # 检查当前终端使用的默认 shell
-cat /etc/shells # 查看系统上安装的可用 shell
-chsh -s /path/to/new/shell # 更改默认 shell
-```
+    ```bash
+    echo $SHELL # 检查当前终端使用的默认 shell
+    cat /etc/shells # 查看系统上安装的可用 shell
+    chsh -s /path/to/new/shell # 更换默认 shell
+    ```
 
-![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE2.png)
+    ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE2.png)
 
-`The default interactive shell is now zsh.` 提示是 macOS 10.15 Catalina 版本以后默认切换到了 zsh 作为默认的 shell 后显示的.
+    `The default interactive shell is now zsh.` 提示是 macOS 10.15 Catalina 版本以后默认切换到了 zsh 作为默认的 shell 后显示的.
 
-> Zsh（Z Shell）是Bash的一个强大的替代品，它提供了更好的命令补全、历史记录管理等功能. 它还支持用插件和脚本扩展其功能. 因此，将Zsh设置为默认Shell可以大大提高操作便利性和效率.
+    > Zsh（Z Shell）是Bash的一个强大的替代品，它提供了更好的命令补全、历史记录管理等功能. 它还支持用插件和脚本扩展其功能. 因此，将Zsh设置为默认Shell可以大大提高操作便利性和效率.
 
-看起来zsh更好用，换回来
+    zsh更好用，换回来  [什么是 zsh？我是否应该使用 zsh](https://www.poloxue.com/posts/2023-09-16-what-how-to-use-zsh/)
 
 ## 问题解决
 
@@ -105,7 +108,7 @@ Resolving deltas: 100% (664865/664865), done.
 
 ![MacDE38](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE38.png)
 
-原因是homebrew的根目录没有信任Homebrew/homebrew-core (no Git repository)和Homebrew/homebrew-cask (no Git repository)，直接按照提示运行这两个命令行即可.
+原因是 `Homebrew` 的根目录没有信任 `Homebrew/homebrew-core (no Git repository)` 和 `Homebrew/homebrew-cask (no Git repository)`，直接按照提示运行这两个命令行即可.
 **装Homebrew时会自动安装Git**
 
 ## brew 命令
@@ -125,6 +128,83 @@ brew home 软件名 # 用浏览器打开官方网页查看软件信息
 brew outdated # 查看哪些已安装的程序需要更新
 brew reps # 显示包依赖
 brew help # 显示帮助
+```
+## 美化终端
+
+[参考](https://www.poloxue.com/tags/zsh/)
+
+1. 安装 [oh-my-zsh](https://www.itqaq.com/index/568.html) (流行的 zsh 框架)
+
+    ```bash
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
+
+    ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE41.png)
+
+2. 更换主题
+
+    `~/.zshrc`
+
+    ```bash
+    # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+    ZSH_THEME="passion" # 更换默认主题robbyrussell
+    ```
+- [内置主题](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)：看 `ZSH_THEME` 行上方链接
+- [第三方主题](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes)：`clone` 到 `~/.oh-my-zsh/themes` 中使用
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE42.png)
+
+3. 配置插件
+
+   `~/.zshrc`
+
+   ```bash
+   plugins=(git git-lfs z extract web-search zsh-autosuggestions zsh-syntax-highlighting you-should-use)
+   ```
+   
+- [内置插件](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)：[git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)  [git-lfs](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-lfs) [z](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z)  [extract](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/extract)  [web-search](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search)
+
+	`git` 插件：`alias | grep git` 查看别名，结合 `you-should-use` 插件使用更方便
+
+- 第三方插件：`clone` 到 `~/.oh-my-zsh/custom/plugins` 中使用
+
+    参考：[zsh、oh-my-zsh、提示主题与 7 效率插件](https://www.poloxue.com/posts/2023-10-16-zsh-themes-and-plugins/)  [6 个强大的 zsh 提效插件](https://www.poloxue.com/posts/2023-10-19-zsh-6-powerful-plugins/)  zsh资源合集：[awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins)
+
+    [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md) 自动补全
+
+    ```bash
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    ```
+    [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) 语法高亮
+
+    ```bash
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    ```
+
+    [zsh-you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use) 提示别名
+
+    ```bash
+    git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
+    ```
+
+    [autojump](https://github.com/wting/autojump) `j DIR` 快速导航到常用目录
+
+    `autojump` 根据访问频率和最近使用时间来智能推断目录  `z` 根据历史记录中的目录列表来匹配
+
+    ```bash
+    brew install autojump
+    ```
+
+我的 `~/.zshrc` 配置：
+
+```bash
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+# theme
+ZSH_THEME="passion"
+# plugins
+plugins=(git git-lfs z extract web-search zsh-autosuggestions zsh-syntax-highlighting you-should-use)
+
+source $ZSH/oh-my-zsh.sh
 ```
 
 # Git
