@@ -48,15 +48,33 @@ banner_img: /img/MC_castle1.jpg
 ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240204154424890.png)
 
 # 美化终端
-安装和使用 `oh-my-zsh` 来美化终端：
+> [ohmyzsh官网](https://github.com/ohmyzsh/ohmyzsh) 
+
+安装和使用 `oh-my-zsh` 框架来美化终端：
 ```bash
-# 1. 安装 zsh
+# 1.安装 zsh
 sudo apt update
 sudo apt install zsh
-# 2. 安装 Oh My Zsh：用 curl 或 wget
+# 2.安装 Oh My Zsh：用 curl 或 wget
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-# 3. 切换到 zsh
+# 3.切换到 zsh
 chsh -s $(which zsh)
 ```
 ![oh_my_zsh](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oh_my_zsh.png)
+
+更多配置参考 [macOS开发环境配置_美化终端](http://kk1024.cool/2024/02/03/MacDE%E9%85%8D%E7%BD%AE/#brew-%E5%91%BD%E4%BB%A4)
+
+激活插件后效果：
+
+`git`
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240511143318657.png)
+
+`web_search`
+
+![web_search](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/web_search.gif)
+
+自动补全、语法高亮、提示别名
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240511155724103.png)
