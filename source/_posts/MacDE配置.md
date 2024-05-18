@@ -194,6 +194,10 @@ brew help # 显示帮助
     brew install autojump
     ```
 
+    激活插件后效果：
+
+    ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/MacDE43.png)
+
 我的 `~/.zshrc` 配置：
 
 ```bash
