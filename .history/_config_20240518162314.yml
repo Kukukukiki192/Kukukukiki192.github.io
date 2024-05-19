@@ -172,11 +172,17 @@ live2d:
 
 # 电子时钟插件
 electric_clock:
-  priority: 5
+  priority: 5 #插件的叠放顺序,数字越大,叠放约靠前
   enable: true
-  enable_page: all
+  enable_page: all #路由地址,all代表全局开启 如/代表主页
   layout:
     type: class
     name: sticky_layout
     index: 0
   temple_html: '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>'
+
+# hexo-filter-github-emojis 插件
+githubEmojis:
+  enable: true
+  className: github-emoji
+  customEmojis: {}
