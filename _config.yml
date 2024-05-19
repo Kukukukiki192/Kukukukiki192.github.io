@@ -98,6 +98,8 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: fluid #landscape
+plugins:
+  - hexo-filter-github-emojis
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -180,9 +182,3 @@ electric_clock:
     name: sticky_layout
     index: 0
   temple_html: '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>'
-
-# hexo-filter-github-emojis 插件
-githubEmojis:
-  enable: true
-  className: github-emoji
-  customEmojis: {}
