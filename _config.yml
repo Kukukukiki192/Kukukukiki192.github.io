@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: KK's Blog #Hexo
+title: K's Blog #Hexo
 subtitle: ''
 description: ''
 keywords:
-author: KK #John Doe
+author: K #John Doe
 language: zh-CN #en
 timezone: ''
 
@@ -99,7 +99,6 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: fluid #landscape
 plugins:
-  - hexo-filter-github-emojis
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -112,26 +111,34 @@ deploy:
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 ## markdown 渲染引擎配置，默认是hexo-renderer-marked，这个插件渲染速度更快，且有新特性
-markdown:
-  render:
-    html: true
-    xhtmlOut: false
-    breaks: true
-    linkify: true
-    typographer: true
-    quotes: '“”‘’'
-  plugins:
-    - markdown-it-footnote
-    - markdown-it-sup
-    - markdown-it-sub
-    - markdown-it-abbr
-    - markdown-it-emoji
-  anchors:
-    level: 2
-    collisionSuffix: 'v'
-    permalink: false
-    permalinkClass: header-anchor
-    permalinkSymbol: ¶
+#markdown:
+#  render:
+#    html: true
+#    xhtmlOut: false
+#    breaks: true
+#    linkify: true
+#    typographer: true
+#    quotes: '“”‘’'
+#  plugins:
+#    - markdown-it-footnote
+#    - markdown-it-sup
+#    - markdown-it-sub
+#    - markdown-it-abbr
+#    - markdown-it-emoji
+#  anchors:
+#    level: 2
+#    collisionSuffix: 'v'
+#    permalink: false
+#    permalinkClass: header-anchor
+#    permalinkSymbol: ¶
+
+# hexo-filter-github-emojis插件
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
 
 # Live2D 2D虚拟人物配置
 # helper特有
