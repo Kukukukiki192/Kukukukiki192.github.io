@@ -7,36 +7,39 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="/img/I.png">
   <link rel="icon" href="/img/I.png">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="KK">
+  <meta name="author" content="K">
   <meta name="keywords" content="">
   
     <meta name="description" content="参考： 适用于 Linux 的 Windows 子系统文档 为 win10 打造原生Linux 终端：使用WSL作为Windows下的主力开发工具 激活 WSL 功能  重启电脑 安装 Ubuntu 第一次启动需要几分钟  安装 Windows Terminal安装 Windows Terminal，是因为在配置 oh-my-zsh 主题的时候，要进行一些操作，比如修改 WSL 字体、修改背景透明">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WSL（Windows Subsystem for Linux）">
-<meta property="og:url" content="http://example.com/2024/02/04/WSL/index.html">
-<meta property="og:site_name" content="KK&#39;s Blog">
+<meta property="og:url" content="http://example.com/2024/02/04/wsl/index.html">
+<meta property="og:site_name" content="K&#39;s Blog">
 <meta property="og:description" content="参考： 适用于 Linux 的 Windows 子系统文档 为 win10 打造原生Linux 终端：使用WSL作为Windows下的主力开发工具 激活 WSL 功能  重启电脑 安装 Ubuntu 第一次启动需要几分钟  安装 Windows Terminal安装 Windows Terminal，是因为在配置 oh-my-zsh 主题的时候，要进行一些操作，比如修改 WSL 字体、修改背景透明">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/ubuntu.png">
+<meta property="og:image" content="http://example.com/img/wsl.png">
 <meta property="article:published_time" content="2024-02-04T07:35:16.000Z">
-<meta property="article:modified_time" content="2024-05-18T02:01:11.523Z">
-<meta property="article:author" content="KK">
+<meta property="article:modified_time" content="2024-08-01T17:00:50.524Z">
+<meta property="article:author" content="K">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="WSL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/ubuntu.png">
+<meta name="twitter:image" content="http://example.com/img/wsl.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>WSL（Windows Subsystem for Linux） - KK&#39;s Blog</title>
+  <title>WSL（Windows Subsystem for Linux） - K&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -53,7 +56,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -79,7 +82,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -92,7 +95,9 @@
 
 
   
-<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.1.1"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
 
 
 <body>
@@ -105,7 +110,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>KK&#39;s Blog</strong>
+      <strong>K&#39;s Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -231,7 +236,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          244 字
+          240 字
         
       </span>
     
@@ -288,7 +293,7 @@
                 <p>参考：</p>
 <p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/wsl/">适用于 Linux 的 Windows 子系统文档</a></p>
 <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904064535248909#heading-0">为 win10 打造原生Linux 终端：使用WSL作为Windows下的主力开发工具</a></p>
-<h1 id="激活-WSL-功能"><a href="#激活-WSL-功能" class="headerlink" title="激活 WSL 功能"></a>激活 WSL 功能</h1><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20211006015248161.png" srcset="/img/loading.gif" lazyload width=60%/>
+<h1 id="激活-WSL-功能"><a href="#激活-WSL-功能" class="headerlink" title="激活 WSL 功能"></a>激活 WSL 功能</h1><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20211006015248161.png" srcset="/img/loading.gif" lazyload width="60%/">
 
 <p>重启电脑</p>
 <h1 id="安装-Ubuntu"><a href="#安装-Ubuntu" class="headerlink" title="安装 Ubuntu"></a>安装 Ubuntu</h1><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20211006112559439.png" srcset="/img/loading.gif" lazyload></p>
@@ -302,16 +307,16 @@
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20211007001807107.png" srcset="/img/loading.gif" lazyload></p>
 <hr>
 <p>已更新的设置：</p>
-<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240204155111686.png" srcset="/img/loading.gif" lazyload width=65%/>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240204155111686.png" srcset="/img/loading.gif" lazyload width="65%/">
 
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240204154424890.png" srcset="/img/loading.gif" lazyload></p>
 <h1 id="美化终端"><a href="#美化终端" class="headerlink" title="美化终端"></a>美化终端</h1><blockquote>
 <p><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh">ohmyzsh官网</a> </p>
 </blockquote>
 <p>安装和使用 <code>oh-my-zsh</code> 框架来美化终端：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 1.安装 zsh</span><br>sudo apt update<br>sudo apt install zsh<br><span class="hljs-comment"># 2.安装 Oh My Zsh：用 curl 或 wget</span><br>sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span><br>sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)</span>&quot;</span><br><span class="hljs-comment"># 3.切换到 zsh</span><br>chsh -s $(<span class="hljs-built_in">which</span> zsh)<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 1.安装 zsh</span><br>sudo apt update<br>sudo apt install zsh<br><span class="hljs-comment"># 2.安装 Oh My Zsh：用 curl 或 wget</span><br>sh -c <span class="hljs-string">"<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span><br>sh -c <span class="hljs-string">"<span class="hljs-subst">$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)</span>"</span><br><span class="hljs-comment"># 3.切换到 zsh</span><br>chsh -s $(<span class="hljs-built_in">which</span> zsh)<br></code></pre></td></tr></tbody></table></figure>
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oh_my_zsh.png" srcset="/img/loading.gif" lazyload alt="oh_my_zsh"></p>
-<p>更多配置参考 <a target="_blank" rel="noopener" href="http://kk1024.cool/2024/02/03/MacDE%E9%85%8D%E7%BD%AE/#brew-%E5%91%BD%E4%BB%A4">macOS开发环境配置_美化终端</a></p>
+<p>更多配置参考 <a target="_blank" rel="noopener" href="http://kk1024.cool/2024/02/03/MacDE%E9%85%8D%E7%BD%AE/#%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF">macOS开发环境配置_美化终端</a></p>
 <p>激活插件后效果：</p>
 <p><code>git</code></p>
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240511143318657.png" srcset="/img/loading.gif" lazyload></p>
@@ -346,13 +351,13 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>WSL（Windows Subsystem for Linux）</div>
-      <div>http://example.com/2024/02/04/WSL/</div>
+      <div>http://example.com/2024/02/04/wsl/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>KK</div>
+          <div>K</div>
         </div>
       
       
@@ -371,7 +376,7 @@
               
                 <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
+                    <i class="iconfont icon-cc-by"></i>
                   </span>
                 </a>
               
@@ -390,7 +395,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/02/RegExp/" title="正则表达式">
+                      <a href="/2024/03/02/regexp/" title="正则表达式">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">正则表达式</span>
                         <span class="visible-mobile">上一篇</span>
@@ -400,7 +405,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/02/03/MacDE%E9%85%8D%E7%BD%AE/" title="macOS开发环境配置">
+                      <a href="/2024/02/03/macDEconfig/" title="macOS开发环境配置">
                         <span class="hidden-mobile">macOS开发环境配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -537,10 +542,11 @@
       </span>
     
     
-  
-</div>
 
   
+
+</div>
+
   
   
 </div>
