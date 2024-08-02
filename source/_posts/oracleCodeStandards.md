@@ -56,9 +56,9 @@ banner_img: /img/robot1.jpeg
 
 **缩进**
 
-1 缩进2空格，同一条语句中每个关键字单独成行，右对齐
+1 缩进2空格，同一条语句中每个关键字单独成行，右对齐 
 
- <img src="https://img-blog.csdnimg.cn/5f037d412b33459b97ae8e0095a1d16d.png" width=33%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle1.png)
 
 **换行**
 
@@ -72,7 +72,7 @@ banner_img: /img/robot1.jpeg
 
 5 关键字独立成行：`DECLARE` `AS` `RETURN` `BEGIN` `END` `EXCEPTION`
 
- <img src="https://img-blog.csdnimg.cn/ae1a61a11392409d87bd7a873a91868d.png"  width=30%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle2.png) 
 
 **格式**
 
@@ -80,11 +80,11 @@ banner_img: /img/robot1.jpeg
 
 2 操作符前后应以空格分隔，间隔符之后应以空格分隔
 
- <img src="https://img-blog.csdnimg.cn/c83aee43c0f54177826a6f01b130aa70.png"   width=36%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle3.png)
 
 3 insert语句中，select中的字段应与insert中的字段在位置上——对应
 
- <img src="https://img-blog.csdnimg.cn/fc2b6c2d56ff46659222e9064dbee886.png"   width=50%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle4.png)
 
 
 
@@ -94,11 +94,11 @@ banner_img: /img/robot1.jpeg
 
 2 注释内容包括:创建者、创建日期、功能描述、修改记录等
 
- <img src="https://img-blog.csdnimg.cn/e193895219c14b91a7c388b6d7663c1d.png"  width=40% />
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle5.png) 
 
 3 注释应紧靠其描述的代码，在代码的上方或者右方
 
- <img src="https://img-blog.csdnimg.cn/0b6826ff3e994292b2f06f0b53826d81.png"  width=40% />
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle6.png) 
 
 4 注释与所描述的代码进行同样的缩进
 
@@ -110,23 +110,23 @@ banner_img: /img/robot1.jpeg
 
 1 使用SQL99语法标准，连接条件写在 `on` 里，过滤条件写在 `where` 里
 
- <img src="https://img-blog.csdnimg.cn/bf27eac21eae471e801a86155aafb215.png"  width=30%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle7.png) 
 
 2 不允许使用 `select *`，将需要的字段一一列出
 
- <img src="https://img-blog.csdnimg.cn/32fc9b1dc61e4d3bb199903d40136ebd.png"  width=25%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle8.png) 
 
 3 insert语句中必须列出要插入的字段名
 
- <img src="https://img-blog.csdnimg.cn/a4d0ecef8cac4447baf05c8dbd140fca.png"  width=20%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle9.png) 
 
 4 当sql中涉及多个表时，字段名应+前缀表名/表别名，别名不要重复
 
- <img src="https://img-blog.csdnimg.cn/e5da460ca8ca49b3b2f75a87a5a5ab6f.png"  width=40%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle10.png) 
 
 5 尽量使用静态sql，少用动态sql
 
- <img src="https://img-blog.csdnimg.cn/1041bc10429641c1b65e09c97f6a2e2d.png"  width=50%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle11.png) 
 
 6 使用通用语法和函数. 如用 `case` 代替 `decode` (Oracle特有函数，放到MySQL里就不会识别)
 
@@ -140,28 +140,28 @@ banner_img: /img/robot1.jpeg
 
 1 where中应避免隐式转换，避免对索引列使用丞数
 
- <img src="https://img-blog.csdnimg.cn/356680a667a84cf297bb39c266ac33d7.png"   width=60%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle12.png)
 
 2 表的更新操作用 `merge` 代替 `update`
 
- <img src="https://img-blog.csdnimg.cn/b3ea5f38b7b7433fb0456e6fb27df78f.png"   width=60%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle13.png) 
 
 3 避免函数频繁执行
 
- <img src="https://img-blog.csdnimg.cn/b3f36e0e4daa44f0b031d80cc38e3c79.png"   width=60%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle14.png) 
 
 4 尽量避免使用 `or` 操作符
 
- <img src="https://img-blog.csdnimg.cn/b18c1c485ef448f58d581b7fe0336c70.png"   width=40%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle15.png) 
 
 5 动态sql应使用绑定变量
 
- <img src="https://img-blog.csdnimg.cn/cf5c316de7ae458d8e32135257968d09.png"   width=30%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle16.png) 
 
 6 判断存在性时，要加上 `rownum=1`
 
- <img src="https://img-blog.csdnimg.cn/ee4d80e52bf64560843bef76360b5cd9.png"   width=30%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle17.png) 
 
 7 变量赋值尽量用 `:=`，比 `select into` 快
 
- <img src="https://img-blog.csdnimg.cn/e45ad1d772d740e997557c6432eed602.png"   width=50%/>
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle18.png) 
