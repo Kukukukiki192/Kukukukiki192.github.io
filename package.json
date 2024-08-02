@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "braces": "^3.0.3",
-    "got": "^11.8.6",
+    "got": "^14.4.2",
     "hexo": "^7.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-electric-clock": "^1.1.0",
