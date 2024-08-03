@@ -225,6 +225,16 @@ path 和 classpath 的作用：
 - 运行路径 path 变量记录的是**各个程序所在的路径**，系统根据这个变量的值来查找运行程序（各种命令），使得在运行的时候不用输入全路径名
 - 类路径 classpath 环境变量通常用来记录**当前路径和java类库所在的路径**. 在类库中包含java系统所提供的各种软件包，其中包括各个类和接口等
 
+Q：Path变量值变成单行状态，不方便查阅编辑
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug58)
+
+A：`C:\Windows\System32`变量应放在最前面，保存后再打开即可恢复列表状态
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug59)
+
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug60" width=70%/>
+
 ## Win自动更新问题
 
 Q：系统更新后虚拟机启动蓝屏 卸载更新重启时又自动配置
