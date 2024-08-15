@@ -301,6 +301,18 @@ A：此电脑->右键-管理
 
 <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug33.png" width=30%/>
 
+## 彻底删除提示“找不到该项目”的目录
+新建文本文档 `delete.txt`，粘贴以下代码保存：
+```
+DEL /F /A /Q \\?\%1
+RD /S /Q \\?\%1
+```
+重命名扩展名为 `.bat`：
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug62.png)
+
+将文件拖入 `delete.bat` 强制删除
+
 # 网络
 
 ## [Win10使用clash开启代理后仍然无法proxy上网的问题](https://www.likecs.com/show-440349.html)
