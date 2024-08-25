@@ -16,26 +16,28 @@
   <meta name="author" content="K">
   <meta name="keywords" content="">
   
-    <meta name="description" content="WhoZJUT, Software Engineering, Direction of Big Data Project     AnimalWorld      DingdingBookstore">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://example.com/about/index.html">
+    <meta name="description" content="参考文件--偏好设置--图像–上传服务 2种方式安装参考博客  PicGo-Core (command line) ：Typora中直接 下载或更新 太慢  Custom Command：npm 本地安装 PicGo-Core以命令行方式配置图床   typora-plugins-win-img 安装 配置 picgo use uploader 后的图床配置 ~\.picgo\config.jso">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传">
+<meta property="og:url" content="http://example.com/2023/02/03/typoraImg/index.html">
 <meta property="og:site_name" content="K&#39;s Blog">
-<meta property="og:description" content="WhoZJUT, Software Engineering, Direction of Big Data Project     AnimalWorld      DingdingBookstore">
+<meta property="og:description" content="参考文件--偏好设置--图像–上传服务 2种方式安装参考博客  PicGo-Core (command line) ：Typora中直接 下载或更新 太慢  Custom Command：npm 本地安装 PicGo-Core以命令行方式配置图床   typora-plugins-win-img 安装 配置 picgo use uploader 后的图床配置 ~\.picgo\config.jso">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/sharpicons_Bat.png">
-<meta property="og:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/book.png">
-<meta property="article:published_time" content="2021-10-05T14:57:38.000Z">
+<meta property="og:image" content="http://example.com/img/typora.png">
+<meta property="article:published_time" content="2023-02-03T06:22:25.000Z">
 <meta property="article:modified_time" content="2024-08-25T06:51:52.949Z">
 <meta property="article:author" content="K">
+<meta property="article:tag" content="Typora">
+<meta property="article:tag" content="PicGO">
+<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/sharpicons_Bat.png">
+<meta name="twitter:image" content="http://example.com/img/typora.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>关于 - K&#39;s Blog</title>
+  <title>Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传 - K&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -102,7 +104,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -202,15 +204,57 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/spiderman1.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/cat.JPG') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="关于"></span>
+            <span id="subtitle" data-typed-text="Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-02-03 14:22" pubdate>
+          2023年2月3日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          313 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          1 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
 
         
       </div>
@@ -226,86 +270,174 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/img/I.png" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">K</div>
-    <div class="about-intro">Basketball Girl / 数独拼酷玩家 / 动物世界爱好者</div>
-    <div class="about-icons">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        
-        
-        
-        <a href=/kossin.chu@qq.com class="
-           hint--bottom hint--rounded"
-           aria-label=Email
-           target="_blank"
-        >
-          <i class="iconfont icon-mail" aria-hidden="true"></i>
-          
-        </a>
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><code>文件--偏好设置--图像–上传服务</code> 2种方式安装参考博客</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chonglu/p/16894257.html">PicGo-Core (command line)</a> ：Typora中直接 <code>下载或更新</code> 太慢</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/skuld-yi/p/14533794.html">Custom Command</a>：<code>npm</code> 本地安装 PicGo-Core以命令行方式配置图床</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/Thobian/typora-plugins-win-img">typora-plugins-win-img</a></p>
+<h2 id="安装-配置"><a href="#安装-配置" class="headerlink" title="安装 配置"></a>安装 配置</h2><p><img src="https://github.com/Kukukukiki192/TyporaImg/blob/main/img/image-20230203120809911.png?raw=true" srcset="/img/loading.gif" lazyload></p>
+<p><code>picgo use uploader</code> 后的图床配置 <code>~\.picgo\config.json</code></p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">{</span><br>  <span class="hljs-attr">"picBed"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><br>    <span class="hljs-attr">"uploader"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"github"</span><span class="hljs-punctuation">,</span>  <span class="hljs-comment">//当前默认上传图床</span><br>    <span class="hljs-attr">"current"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"github"</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">"github"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><br>      <span class="hljs-attr">"repo"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Kukukukiki192/TyporaImg"</span><span class="hljs-punctuation">,</span>  <span class="hljs-comment">//自己的仓库名</span><br>      <span class="hljs-attr">"branch"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"main"</span><span class="hljs-punctuation">,</span>  <span class="hljs-comment">//默认分支</span><br>      <span class="hljs-attr">"token"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"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"</span><span class="hljs-punctuation">,</span>  <span class="hljs-comment">// github的token</span><br>      <span class="hljs-attr">"path"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"img/"</span><span class="hljs-punctuation">,</span>  <span class="hljs-comment">//自定义存储路径(仓库下新建文件夹，可为空)</span><br>      <span class="hljs-attr">"customUrl"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://github.com/Kukukukiki192/TyporaImg/raw/main"</span>  <span class="hljs-comment">//自定义域名</span><br>      <span class="hljs-comment">//https://github.com/[username]/[repo]/raw/[branch] 必须是该格式,不然用其它域名访问图片404本地加载失败</span><br>    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">"transformer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"path"</span><br>  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">"picgoPlugins"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-punctuation">}</span>  <span class="hljs-comment">// 为插件预留</span><br><span class="hljs-punctuation">}</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h2 id="图片上传服务设置和验证"><a href="#图片上传服务设置和验证" class="headerlink" title="图片上传服务设置和验证"></a>图片上传服务设置和验证</h2><p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230203144056522.png" srcset="/img/loading.gif" lazyload></p>
+<p>按照参考建议：插入图片时先保存到本地以实现流畅的即时预览，在完成文章后统一批量上传 <code>格式–图像–上传所有本地图片(Format-Image-Upload All Local Images)</code></p>
+<h2 id="上传图片失败问题"><a href="#上传图片失败问题" class="headerlink" title="上传图片失败问题"></a>上传图片失败问题</h2><p>针对状态码401情况的解决方案：删除旧的token，生成新的token</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207151331420.png" srcset="/img/loading.gif" lazyload></p>
+<div><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207155156678.png" srcset="/img/loading.gif" lazyload width="40%"><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207155450598.png" srcset="/img/loading.gif" lazyload width="60%"><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207154220620.png" srcset="/img/loading.gif" lazyload width="50%"><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207154627237.png" srcset="/img/loading.gif" lazyload width="50%"></div>
+
+<p>针对状态码422情况的解决方案：这是由同名文件导致的，修改上传的图片名称或删除之前上传的同名文件</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230915213555559.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230915214145277.png" srcset="/img/loading.gif" lazyload></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
-        
-        
-        
-        <a  class="qr-trigger
-           "
-           
-           target="_self"
-        >
-          <i class="iconfont icon-qq-fill" aria-hidden="true"></i>
-          
-            <img class="qr-img" src="/img/qq.png" srcset="/img/loading.gif" lazyload alt="qrcode" />
-          
-        </a>
+        <a href="/tags/Typora/" class="print-no-link">#Typora</a>
       
-        
-        
-        
-        <a  class="qr-trigger
-           "
-           
-           target="_self"
-        >
-          <i class="iconfont icon-wechat2-fill" aria-hidden="true"></i>
-          
-            <img class="qr-img" src="/img/wechat.jpg" srcset="/img/loading.gif" lazyload alt="qrcode" />
-          
-        </a>
+        <a href="/tags/PicGO/" class="print-no-link">#PicGO</a>
       
+        <a href="/tags/Github/" class="print-no-link">#Github</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Typora + PicGO-Core(cmd安装方式) + Github 实现图片上传</div>
+      <div>http://example.com/2023/02/03/typoraImg/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>K</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年2月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/02/04/linux/" title="Linux">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Linux</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/10/13/hackerrankSQL/" title="HackerRank-SQL">
+                        <span class="hidden-mobile">HackerRank-SQL</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
     </div>
   </div>
 </div>
 
-<article class="about-content page-content mt-5">
-  <div class="markdown-body">
-    <h1 id="Who"><a href="#Who" class="headerlink" title="Who"></a>Who</h1><p>ZJUT, Software Engineering, Direction of Big Data</p>
-<h1 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h1><div align="left">
-    AnimalWorld<span>      </span>DingdingBookstore<br>
-    <a target="_blank" rel="noopener" href="https://kk1024.cool/AnimalWorld/">
-    <img height="150px" src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/sharpicons_Bat.png" srcset="/img/loading.gif" lazyload></a>
-    <span>  </span>
-    <a target="_blank" rel="noopener" href="https://kk1024.cool/DingdingBookstore/">
-    <img height="150px" src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/book.png" srcset="/img/loading.gif" lazyload></a>
-    <span>  </span>
-</div>
-  </div>
-
-  
-</article>
-
 
 
 
@@ -332,11 +464,8 @@
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     
 
     
@@ -453,6 +582,46 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
 
 
   <script src=https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js></script>
