@@ -313,6 +313,16 @@ RD /S /Q \\?\%1
 
 将文件拖入 `delete.bat` 强制删除
 
+## [【此电脑】删除【百度网盘同步空间 / OneDrive / WPS云盘 / 华为云盘】等已经卸载的驱动设备图标](https://www.cnblogs.com/byx1024/p/16793327.html)
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug63.png)
+
+去注册表中删除对应NameSpace，win-r → `regedit`：
+
+```
+计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace
+```
+
 # 网络
 
 ## [Win10使用clash开启代理后仍然无法proxy上网的问题](https://www.likecs.com/show-440349.html)
