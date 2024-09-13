@@ -313,11 +313,13 @@ RD /S /Q \\?\%1
 
 将文件拖入 `delete.bat` 强制删除
 
-## [【此电脑】删除【百度网盘同步空间 / OneDrive / WPS云盘 / 华为云盘】等已经卸载的驱动设备图标](https://www.cnblogs.com/byx1024/p/16793327.html)
+## [彻底删除已卸载的驱动设备图标](https://www.cnblogs.com/byx1024/p/16793327.html)
+
+【此电脑-百度网盘同步空间 / OneDrive / WPS云盘 / 华为云盘】等云盘驱动设备已被卸载，存储目录不存在却仍然显示：
 
 ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug63.png)
 
-去注册表中删除对应NameSpace，win-r → `regedit`：
+去注册表的以下目录中删除对应NameSpace，win-r → `regedit`：
 
 ```
 计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace
