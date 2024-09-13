@@ -319,7 +319,7 @@ RD /S /Q \\?\%1
 
 ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug63.png)
 
-去注册表的以下目录中删除对应NameSpace，win-r → `regedit`：
+win-r 运行 `regedit`，删除注册表以下目录中对应的NameSpace：
 
 ```
 计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace
