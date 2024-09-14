@@ -5,44 +5,12 @@ tags: [快捷键, CMD, IDEA, VSCode, Notepad++, XShell]
 index_img: /img/win.png
 banner_img: /img/virus.JPG
 ---
-# Win
+# [Windows 的键盘快捷方式](https://support.microsoft.com/zh-cn/windows/windows-%E7%9A%84%E9%94%AE%E7%9B%98%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F-dcc61a57-8ff0-cffe-9796-cb9706c75eec)
 
-**cmd 命令行**
-
-```sh
-control #打开控制面板
-ipconfig [/all显示更详细信息] #查看和配置网络接口信息(Linux: ifconfig 新版命令ip addr show)
-ipconfig /flushdns #刷新缓存
-netsh winsock reset #重置网络
-```
-
-**win+r 运行**
-
-```sh
-wt #打开 Windows Terminal
-cmd #打开命令提示符（Command Prompt）窗口
-powershell #打开PowerShell终端窗口
-calc #打开计算器
-mspaint #打开画图工具（Microsoft Paint）
-notepad #打开记事本
-control #打开控制面板
-taskmgr #打开任务管理器，用于管理运行中的进程和应用程序
-regedit #打开Windows注册表编辑器，用于编辑系统注册表
-servises.msc #打开服务
-devmgmt.msc #打开设备管理器，用于管理计算机的硬件设备
-appwiz.cpl #打开'程序和功能'窗口，允许您卸载或更改已安装的程序
-msconfig #打开系统配置实用程序，用于配置系统启动项和服务
-msinfo32 #打开系统信息实用程序，显示有关计算机硬件和软件的详细信息
-dxdiag #打开DirectX诊断工具，用于检查图形和音频驱动程序
-control userpasswords2 #打开用户帐户窗口，允许您管理用户帐户设置
-osk #打开屏幕键盘，适用于触摸屏设备或需要虚拟键盘的情况
-inetcpl.cpl #打开Internet属性，允许您配置Internet Explorer的设置
-winver #显示Windows版本和构建信息
-%temp% #打开临时文件夹，您可以查看和删除临时文件
-```
+**快捷键**
 
 | 键盘                   |                                      |
-| :---------------------- | ------------------------------------ |
+| :--------------------- | ------------------------------------ |
 | `Ctrl-Shift-E`         | 打开emoji符号面板                    |
 | `Shift`                | 中/英切换                            |
 | `Ctrl-.`               | 中/英标点切换                        |
@@ -55,14 +23,16 @@ winver #显示Windows版本和构建信息
 | **电脑**               |                                      |
 | `Win-L`                | 锁屏                                 |
 | `Win-D`                | 返回桌面                             |
+| `Win-Z`                | 分隔窗口                             |
 | `Win-R`                | 打开运行                             |
 | `Win-E`                | 打开此电脑                           |
+| `Win-I`                | 打开设置                             |
 | `Win-X`                | 打开快捷菜单(开始菜单右键)           |
 | `Win-W`                | 打开小组件                           |
 | `Alt-Q`                | 智慧搜索                             |
 | `Alt-Tab`              | 切换应用(触摸板==三指左右划不挪开==) |
 | `Win-Tab`              | 进入虚拟桌面(触摸板==三指上划==)     |
-| `Ctrl-Win-l/r`         | 切换虚拟桌面(触摸板==四指左右划==)   |
+| `Ctrl-Win-left/right`  | 切换虚拟桌面(触摸板==四指左右划==)   |
 | `Ctrl-Win-D`           | 添加虚拟桌面                         |
 | `Ctrl-Alt-Delete`      | 调出安全窗口(→任务管理器)            |
 | `Ctrl-Esc` / `Win`     | 开始菜单                             |
@@ -73,6 +43,50 @@ winver #显示Windows版本和构建信息
 | `F5`                   | 刷新当前窗口                         |
 | `Tab`                  | 改变焦点 回到页首                    |
 | `M`                    | 看视频时静音                         |
+
+**cmd 命令行**
+
+```sh
+control #打开控制面板
+ipconfig [/all显示更详细信息] #查看和配置网络接口信息(Linux: ifconfig 新版命令ip addr show)
+ipconfig /flushdns #刷新缓存
+netsh winsock reset #重置网络
+```
+
+**win-r 运行**
+
+| 输入                     | 启动程序                                               |
+| ------------------------ | ------------------------------------------------------ |
+| `wt`                     | Windows Terminal                                       |
+| `cmd`                    | Command Prompt                                         |
+| `powershell`             | PowerShell                                             |
+| `control`                | 控制面板                                               |
+| `taskmgr`                | 任务管理器                                             |
+| `regedit`                | 注册表                                                 |
+| `calc`                   | 计算器                                                 |
+| `notepad`                | 记事本                                                 |
+| `write`                  | 写字板                                                 |
+| `mspaint`                | Microsoft Paint 画图工具                               |
+| `services.msc`           | 服务                                                   |
+| `compmgmt.msc`           | 计算机管理                                             |
+| `devmgmt.msc`            | 设备管理器                                             |
+| `gpedit.msc`             | 组策略                                                 |
+| `sysdm.cpl`              | 系统属性（高级-环境变量）                              |
+| `inetcpl.cpl`            | Internet属性                                           |
+| `appwiz.cpl`             | 程序和功能（卸载或更改程序）                           |
+| `Firewall.cpl`           | 防火墙                                                 |
+| `osk`                    | 屏幕键盘                                               |
+| `winver`                 | 显示Windows版本和构建信息                              |
+| `mstsc`                  | 远程桌面连接                                           |
+| `msconfig`               | 系统配置实用程序（配置系统启动项和服务）               |
+| `msinfo32`               | 系统信息实用程序（显示有关计算机硬件和软件的详细信息） |
+| `dxdiag`                 | DirectX诊断工具（检查图形和音频驱动程序）              |
+| `control userpasswords2` | 用户帐户窗口                                           |
+| `wuapp`                  | win更新                                                |
+| `logoff`                 | 注销命令                                               |
+| `%temp%`                 | 临时文件夹                                             |
+| `shutdown -s -t 60`      | 60s后自动关机                                          |
+| `shutdown -a`            | 取消定时关机                                           |
 
 # 开发工具
 

@@ -225,6 +225,16 @@ path 和 classpath 的作用：
 - 运行路径 path 变量记录的是**各个程序所在的路径**，系统根据这个变量的值来查找运行程序（各种命令），使得在运行的时候不用输入全路径名
 - 类路径 classpath 环境变量通常用来记录**当前路径和java类库所在的路径**. 在类库中包含java系统所提供的各种软件包，其中包括各个类和接口等
 
+Q：Path变量值变成单行状态，不方便查阅编辑
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug58)
+
+A：`C:\Windows\System32`变量应放在最前面，保存后再打开即可恢复列表状态
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug59)
+
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug60" width=70%/>
+
 ## Win自动更新问题
 
 Q：系统更新后虚拟机启动蓝屏 卸载更新重启时又自动配置
@@ -290,6 +300,30 @@ A：此电脑->右键-管理
 退出电脑管家重启 有了
 
 <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug33.png" width=30%/>
+
+## 彻底删除提示“找不到该项目”的目录
+新建文本文档 `delete.txt`，粘贴以下代码保存：
+```
+DEL /F /A /Q \\?\%1
+RD /S /Q \\?\%1
+```
+重命名扩展名为 `.bat`：
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug62.png)
+
+将文件拖入 `delete.bat` 强制删除
+
+## [彻底删除已卸载的驱动设备图标](https://www.cnblogs.com/byx1024/p/16793327.html)
+
+【此电脑-百度网盘同步空间 / OneDrive / WPS云盘 / 华为云盘】等云盘驱动设备已被卸载，存储目录不存在却仍然显示：
+
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug63.png)
+
+win-r 运行 `regedit`，删除注册表以下目录中对应的NameSpace：
+
+```
+计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace
+```
 
 # 网络
 

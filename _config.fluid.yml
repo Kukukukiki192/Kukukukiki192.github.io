@@ -30,7 +30,7 @@ tab_title_separator: " - "
 
 # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
 # Force all links to be HTTPS (applicable to HTTP mixed error)
-force_https: false
+force_https: true
 
 # 代码块的增强配置
 # Enhancements to code blocks
@@ -391,11 +391,10 @@ open_graph:
 footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
-  content: '
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
-  '
+  content: '<i class="iconfont icon-copyright"></i><span>2021-PRESENT  </span><i class="iconfont icon-mail"></i><span>kossin.chu@qq.com</span>'
+  # '<a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+  #   <i class="iconfont icon-love"></i>
+  #   <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>'
 
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
@@ -652,7 +651,7 @@ post:
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis
-    type: disqus
+    type: twikoo
 
 
 #---------------------------
@@ -781,8 +780,8 @@ remark42:
 # Based on Tencent CloudBase
 # See: https://twikoo.js.org
 twikoo:
-  envId:
-  region: ap-shanghai
+  envId: https://twikookk.netlify.app/.netlify/functions/twikoo # 环境ID
+  region: ap-shanghai # 若环境地域不是上海,需要传此参数
   path: window.location.pathname
 
 # Cusdis
@@ -870,14 +869,14 @@ about:
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
     # - { class: "iconfont icon-github-fill", link: "https://github.com/Kukukukiki192", tip: "GitHub" }
-    - { class: "iconfont icon-mail", link: "kossin.chu@qq.com", tip: "Email" }
+    # - { class: "iconfont icon-mail", link: "kossin.chu@qq.com", tip: "Email" }
     - { class: "iconfont icon-qq-fill", qrcode: "/img/qq.png", tip: "QQ" }
     - { class: "iconfont icon-wechat2-fill", qrcode: "/img/wechat.jpg", tip: "WeChat" }
     # - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
     # - { class: "iconfont icon-facebook-fill", link: "https://www.facebook.com/zkx.kk1024", tip: "Facebook" }
     # - { class: "iconfont icon-instagram-fill", link: "https://www.instagram.com/zkx_kk1024", qrcode: "/img/ins.JPG", tip: "Instagram" }
     # - { class: "iconfont icon-bilibili-fill", link: "https://space.bilibili.com/384686819", tip: "Bilibili" }
-    # - { class: "iconfont icon-twitter-fill", link: "https://mobile.twitter.com/zkx_kk1024", tip: "Twitter" }
+    - { class: "iconfont icon-twitter-fill", link: "https://mobile.twitter.com/zkx_kk1024", tip: "Twitter" }
     # - { class: "iconfont icon-weibo-fill", qrcode: "/img/weibo.jpg", tip: "微博" }
 
 

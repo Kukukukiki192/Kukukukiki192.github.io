@@ -99,6 +99,13 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: fluid #landscape
 plugins:
+  # 配置音乐播放器 无效
+  music:
+    enable: true
+    server: tencent # require music platform: netease, tencent, kugou, xiami, baidu
+    type: song # require song, playlist, album, search, artist
+    id: 109596264 # require song id / playlist id / album id / search keyword
+    autoplay: false # 是否自动播放
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -110,27 +117,6 @@ deploy:
 # [add]
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
-## markdown 渲染引擎配置，默认是hexo-renderer-marked，这个插件渲染速度更快，且有新特性
-#markdown:
-#  render:
-#    html: true
-#    xhtmlOut: false
-#    breaks: true
-#    linkify: true
-#    typographer: true
-#    quotes: '“”‘’'
-#  plugins:
-#    - markdown-it-footnote
-#    - markdown-it-sup
-#    - markdown-it-sub
-#    - markdown-it-abbr
-#    - markdown-it-emoji
-#  anchors:
-#    level: 2
-#    collisionSuffix: 'v'
-#    permalink: false
-#    permalinkClass: header-anchor
-#    permalinkSymbol: ¶
 
 # hexo-filter-github-emojis插件
 githubEmojis:
@@ -167,9 +153,9 @@ live2d:
     vHeadPos: 0.618
   display:
     superSample: 2
-    width: 150 #控制看板娘大小
-    height: 300 #控制看板娘大小
-    position: left #控制看板娘位置
+    width: 150 # 控制看板娘大小
+    height: 300 # 控制看板娘大小
+    position: left # 控制看板娘位置
     hOffset: 0
     vOffset: -20
   mobile:
@@ -179,13 +165,3 @@ live2d:
     opacityDefault: 0.7
     opacityOnHover: 0.2
 
-# 电子时钟插件
-electric_clock:
-  priority: 5 #插件的叠放顺序,数字越大,叠放约靠前
-  enable: true
-  enable_page: all #路由地址,all代表全局开启 如/代表主页
-  layout:
-    type: class
-    name: sticky_layout
-    index: 0
-  temple_html: '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>'
