@@ -35,6 +35,7 @@ banner_img: /img/virus.JPG
 | `Ctrl-Win-left/right`  | 切换虚拟桌面(触摸板==四指左右划==)   |
 | `Ctrl-Win-D`           | 添加虚拟桌面                         |
 | `Ctrl-Alt-Delete`      | 调出安全窗口(→任务管理器)            |
+| `Ctrl-Shift-Esc`       | 打开任务管理器                      |
 | `Ctrl-Esc` / `Win`     | 开始菜单                             |
 | `Insert`               | 光标 `|` ↔ `_`                       |
 | **浏览器**             |                                      |
