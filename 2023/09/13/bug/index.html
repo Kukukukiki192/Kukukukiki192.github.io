@@ -15,6 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="K">
   <meta name="keywords" content="">
@@ -28,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/bug.png">
 <meta property="article:published_time" content="2023-09-12T17:16:56.000Z">
-<meta property="article:modified_time" content="2024-08-01T17:00:50.524Z">
+<meta property="article:modified_time" content="2024-09-14T11:39:58.109Z">
 <meta property="article:author" content="K">
 <meta property="article:tag" content="bug">
 <meta name="twitter:card" content="summary_large_image">
@@ -94,7 +96,7 @@
 
 
   
-<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0">
+<meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
 
@@ -235,7 +237,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          3.4k 字
+          3.6k 字
         
       </span>
     
@@ -247,7 +249,7 @@
         
         
           <!-- compatible with older versions-->
-          11 分钟
+          12 分钟
         
       </span>
     
@@ -415,6 +417,12 @@
 <li>运行路径 path 变量记录的是<strong>各个程序所在的路径</strong>，系统根据这个变量的值来查找运行程序（各种命令），使得在运行的时候不用输入全路径名</li>
 <li>类路径 classpath 环境变量通常用来记录<strong>当前路径和java类库所在的路径</strong>. 在类库中包含java系统所提供的各种软件包，其中包括各个类和接口等</li>
 </ul>
+<p>Q：Path变量值变成单行状态，不方便查阅编辑</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug58" srcset="/img/loading.gif" lazyload></p>
+<p>A：<code>C:\Windows\System32</code>变量应放在最前面，保存后再打开即可恢复列表状态</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug59" srcset="/img/loading.gif" lazyload></p>
+<img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug60" srcset="/img/loading.gif" lazyload width="70%/">
+
 <h2 id="Win自动更新问题"><a href="#Win自动更新问题" class="headerlink" title="Win自动更新问题"></a>Win自动更新问题</h2><p>Q：系统更新后虚拟机启动蓝屏 卸载更新重启时又自动配置</p>
 <p>A：此电脑-&gt;右键-管理</p>
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug4.png" srcset="/img/loading.gif" lazyload></p>
@@ -461,6 +469,16 @@
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug31.png" srcset="/img/loading.gif" lazyload width="60%/"><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug32.png" srcset="/img/loading.gif" lazyload width="40%/"></p>
 <p>退出电脑管家重启 有了</p>
 <img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug33.png" srcset="/img/loading.gif" lazyload width="30%/">
+
+<h2 id="彻底删除提示“找不到该项目”的目录"><a href="#彻底删除提示“找不到该项目”的目录" class="headerlink" title="彻底删除提示“找不到该项目”的目录"></a>彻底删除提示“找不到该项目”的目录</h2><p>新建文本文档 <code>delete.txt</code>，粘贴以下代码保存：</p>
+<figure class="highlight jboss-cli"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">DEL <span class="hljs-string">/F</span> <span class="hljs-string">/A</span> <span class="hljs-string">/Q</span> \\?\%1<br>RD <span class="hljs-string">/S</span> <span class="hljs-string">/Q</span> \\?\%1<br></code></pre></td></tr></tbody></table></figure>
+<p>重命名扩展名为 <code>.bat</code>：</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug62.png" srcset="/img/loading.gif" lazyload></p>
+<p>将文件拖入 <code>delete.bat</code> 强制删除</p>
+<h2 id="彻底删除已卸载的驱动设备图标"><a href="#彻底删除已卸载的驱动设备图标" class="headerlink" title="彻底删除已卸载的驱动设备图标"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/byx1024/p/16793327.html">彻底删除已卸载的驱动设备图标</a></h2><p>【此电脑-百度网盘同步空间 / OneDrive / WPS云盘 / 华为云盘】等云盘驱动设备已被卸载，存储目录不存在却仍然显示：</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/bug63.png" srcset="/img/loading.gif" lazyload></p>
+<p>win-r 运行 <code>regedit</code>，删除注册表以下目录中对应的NameSpace：</p>
+<figure class="highlight moonscript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace<br></code></pre></td></tr></tbody></table></figure>
 
 <h1 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h1><h2 id="Win10使用clash开启代理后仍然无法proxy上网的问题"><a href="#Win10使用clash开启代理后仍然无法proxy上网的问题" class="headerlink" title="Win10使用clash开启代理后仍然无法proxy上网的问题"></a><a target="_blank" rel="noopener" href="https://www.likecs.com/show-440349.html">Win10使用clash开启代理后仍然无法proxy上网的问题</a></h2><p>win+r -&gt; <code>wt</code> -&gt; <code>netsh winsock reset</code> 回车 -&gt; 重启电脑生效 -&gt; 开clash换节点多试几次 ok</p>
 <h2 id="同一wifi手机连上能上网电脑连上却没网"><a href="#同一wifi手机连上能上网电脑连上却没网" class="headerlink" title="同一wifi手机连上能上网电脑连上却没网"></a>同一wifi手机连上能上网电脑连上却没网</h2><p>手机能上网说明wifi没问题,应是电脑配置不当导致</p>
@@ -698,8 +716,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/04/linux/" title="Linux">
-                        <span class="hidden-mobile">Linux</span>
+                      <a href="/2023/02/24/pr/" title="PR快捷键">
+                        <span class="hidden-mobile">PR快捷键</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -714,6 +732,30 @@
   
     <article id="comments" lazyload>
       
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/twikoo@1/dist/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"https://twikookk.netlify.app/.netlify/functions/twikoo","region":"ap-shanghai","path":"window.location.pathname"},
+          {
+            el: '#twikoo',
+            path: 'window.location.pathname',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
 
     </article>
   
@@ -811,7 +853,7 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+      <i class="iconfont icon-copyright"></i><span>2021-PRESENT  </span><i class="iconfont icon-mail"></i><span>kossin.chu@qq.com</span>
     </div>
   
   
@@ -1008,14 +1050,5 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-<!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
-                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
-                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" srcset="/img/loading.gif" lazyload style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
-                console.log('已挂载electric_clock')
-                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
-                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
-            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
-
-            electric_clock_injector_config()
-        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
