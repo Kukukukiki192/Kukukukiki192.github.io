@@ -21,12 +21,12 @@
   <meta name="author" content="K">
   <meta name="keywords" content="">
   
-    <meta name="description" content="编码规范的意义：代码美观，易于阅读理解&#x2F;降低维护成本&#x2F;降低出错概率&#x2F;提升代码执行效率 感触：简单才是美  1⃣命名 对象命名&#x3D; 对象前缀+模块名+对象标识 v_act_custinfo    对象类型 对象前缀 格式     临时表 temporary table t    视图 view v v_表名   序列 sequence s s_表名   索引 index idx idx_表名_每列首">
+    <meta name="description" content="编码规范的意义：代码美观，易于阅读理解&#x2F;降低维护成本&#x2F;降低出错概率&#x2F;提升代码执行效率 感触：简单才是美  1⃣命名对象命名&#x3D; 对象前缀+模块名+对象标识 v_act_custinfo    对象类型 对象前缀 格式    临时表 temporary table t    视图 view v v_表名   序列 sequence s s_表名   索引 index idx idx_表名_每列首字母">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle编码规范">
 <meta property="og:url" content="http://example.com/2024/08/02/oracleCodeStandards/index.html">
 <meta property="og:site_name" content="K&#39;s Blog">
-<meta property="og:description" content="编码规范的意义：代码美观，易于阅读理解&#x2F;降低维护成本&#x2F;降低出错概率&#x2F;提升代码执行效率 感触：简单才是美  1⃣命名 对象命名&#x3D; 对象前缀+模块名+对象标识 v_act_custinfo    对象类型 对象前缀 格式     临时表 temporary table t    视图 view v v_表名   序列 sequence s s_表名   索引 index idx idx_表名_每列首">
+<meta property="og:description" content="编码规范的意义：代码美观，易于阅读理解&#x2F;降低维护成本&#x2F;降低出错概率&#x2F;提升代码执行效率 感触：简单才是美  1⃣命名对象命名&#x3D; 对象前缀+模块名+对象标识 v_act_custinfo    对象类型 对象前缀 格式    临时表 temporary table t    视图 view v v_表名   序列 sequence s s_表名   索引 index idx idx_表名_每列首字母">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/oracle.png">
 <meta property="article:published_time" content="2024-08-01T17:05:52.000Z">
@@ -296,8 +296,7 @@
 <p>编码规范的意义：代码美观，易于阅读理解/降低维护成本/降低出错概率/提升代码执行效率</p>
 <p>感触：简单才是美</p>
 </blockquote>
-<h3 id="one-命名"><span class="github-emoji"><span>1⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0031-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>命名</h3>
-<p><strong>对象命名</strong>= <code>对象前缀+模块名+对象标识</code> v_act_custinfo</p>
+<h3 id="one-命名"><a href="#one-命名" class="headerlink" title=":one:命名"></a><span class="github-emoji"><span>1⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0031-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>命名</h3><p><strong>对象命名</strong>= <code>对象前缀+模块名+对象标识</code> v_act_custinfo</p>
 <table>
 <thead>
 <tr>
@@ -306,8 +305,7 @@
 <th>格式</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>临时表 temporary table</td>
 <td>t</td>
 <td></td>
@@ -342,8 +340,7 @@
 <td>f</td>
 <td></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>变量命名</strong> = <code>变量前缀+变量标识</code></p>
 <table>
 <thead>
@@ -353,8 +350,7 @@
 <th>示例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>局部变量</td>
 <td>v</td>
 <td>v_begin_date</td>
@@ -364,8 +360,7 @@
 <td>p</td>
 <td>p_oc_date</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>常用英文简写</strong>(原则上简写应不产生歧义)</p>
 <table>
 <thead>
@@ -374,8 +369,7 @@
 <th>简写</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>information</td>
 <td>info</td>
 </tr>
@@ -419,67 +413,62 @@
 <td>business</td>
 <td>biz</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <blockquote>
 <p>通常不应使用<strong>数字</strong>/<strong>特殊字符</strong>来定义标识符</p>
 <p>避免使用数据库<strong>关键字</strong>&amp;<strong>保留字</strong> 如: count</p>
 <p>长度&lt;=<strong>30</strong>个字符</p>
 </blockquote>
-<h3 id="two-书写"><span class="github-emoji"><span>2⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0032-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>书写</h3>
-<p><strong>缩进</strong></p>
-<p>1 缩进2空格，同一条语句中每个关键字单独成行，右对齐</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle1.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h3 id="two-书写"><a href="#two-书写" class="headerlink" title=":two:书写"></a><span class="github-emoji"><span>2⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0032-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>书写</h3><p><strong>缩进</strong></p>
+<p>1 缩进2空格，同一条语句中每个关键字单独成行，右对齐 </p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle1.png" srcset="/img/loading.gif" lazyload></p>
 <p><strong>换行</strong></p>
 <p>1 段语句单独成行</p>
 <p>2 程序块之间用一个空行隔开</p>
 <p>3 较长语句适当换行</p>
 <p>4 在低优先级操作符处，操作符放在行首，并适当缩进</p>
 <p>5 关键字独立成行：<code>DECLARE</code> <code>AS</code> <code>RETURN</code> <code>BEGIN</code> <code>END</code> <code>EXCEPTION</code></p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle2.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle2.png" srcset="/img/loading.gif" lazyload> </p>
 <p><strong>格式</strong></p>
 <p>1 除字符串外，统一使用小写字符书写</p>
 <p>2 操作符前后应以空格分隔，间隔符之后应以空格分隔</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle3.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle3.png" srcset="/img/loading.gif" lazyload></p>
 <p>3 insert语句中，select中的字段应与insert中的字段在位置上——对应</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle4.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<h3 id="three-注释"><span class="github-emoji"><span>3⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0033-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>注释</h3>
-<p>1 脚本文件、函数、过程头部应加注释</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle4.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="three-注释"><a href="#three-注释" class="headerlink" title=":three:注释"></a><span class="github-emoji"><span>3⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0033-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>注释</h3><p>1 脚本文件、函数、过程头部应加注释</p>
 <p>2 注释内容包括:创建者、创建日期、功能描述、修改记录等</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle5.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle5.png" srcset="/img/loading.gif" lazyload> </p>
 <p>3 注释应紧靠其描述的代码，在代码的上方或者右方</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle6.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle6.png" srcset="/img/loading.gif" lazyload> </p>
 <p>4 注释与所描述的代码进行同样的缩进</p>
 <p>5 通过对函数、过程、变量等进行合理命名，使其成为自注释的</p>
-<h3 id="four-语法"><span class="github-emoji"><span>4⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0034-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>语法</h3>
-<p>1 使用SQL99语法标准，连接条件写在 <code>on</code> 里，过滤条件写在 <code>where</code> 里</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle7.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h3 id="four-语法"><a href="#four-语法" class="headerlink" title=":four:语法"></a><span class="github-emoji"><span>4⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0034-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>语法</h3><p>1 使用SQL99语法标准，连接条件写在 <code>on</code> 里，过滤条件写在 <code>where</code> 里</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle7.png" srcset="/img/loading.gif" lazyload> </p>
 <p>2 不允许使用 <code>select *</code>，将需要的字段一一列出</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle8.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle8.png" srcset="/img/loading.gif" lazyload> </p>
 <p>3 insert语句中必须列出要插入的字段名</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle9.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle9.png" srcset="/img/loading.gif" lazyload> </p>
 <p>4 当sql中涉及多个表时，字段名应+前缀表名/表别名，别名不要重复</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle10.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle10.png" srcset="/img/loading.gif" lazyload> </p>
 <p>5 尽量使用静态sql，少用动态sql</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle11.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle11.png" srcset="/img/loading.gif" lazyload> </p>
 <p>6 使用通用语法和函数. 如用 <code>case</code> 代替 <code>decode</code> (Oracle特有函数，放到MySQL里就不会识别)</p>
 <p>7 不使用 <code>goto</code> (跳跃性)语句来控制流程</p>
 <p>8 少用游标(代码效率差)</p>
-<h3 id="five-优化"><span class="github-emoji"><span>5⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0035-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>优化</h3>
-<p>1 where中应避免隐式转换，避免对索引列使用丞数</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle12.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h3 id="five-优化"><a href="#five-优化" class="headerlink" title=":five:优化"></a><span class="github-emoji"><span>5⃣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/0035-20e3.png?v8" srcset="/img/loading.gif" lazyload aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>优化</h3><p>1 where中应避免隐式转换，避免对索引列使用丞数</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle12.png" srcset="/img/loading.gif" lazyload></p>
 <p>2 表的更新操作用 <code>merge</code> 代替 <code>update</code></p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle13.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle13.png" srcset="/img/loading.gif" lazyload> </p>
 <p>3 避免函数频繁执行</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle14.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle14.png" srcset="/img/loading.gif" lazyload> </p>
 <p>4 尽量避免使用 <code>or</code> 操作符</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle15.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle15.png" srcset="/img/loading.gif" lazyload> </p>
 <p>5 动态sql应使用绑定变量</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle16.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle16.png" srcset="/img/loading.gif" lazyload> </p>
 <p>6 判断存在性时，要加上 <code>rownum=1</code></p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle17.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle17.png" srcset="/img/loading.gif" lazyload> </p>
 <p>7 变量赋值尽量用 <code>:=</code>，比 <code>select into</code> 快</p>
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle18.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/oracle18.png" srcset="/img/loading.gif" lazyload> </p>
 
                 
               </div>
