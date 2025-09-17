@@ -876,8 +876,8 @@ about:
     # - { class: "iconfont icon-facebook-fill", link: "https://www.facebook.com/zkx.kk1024", tip: "Facebook" }
     # - { class: "iconfont icon-instagram-fill", link: "https://www.instagram.com/zkx_kk1024", qrcode: "/img/ins.JPG", tip: "Instagram" }
     # - { class: "iconfont icon-bilibili-fill", link: "https://space.bilibili.com/384686819", tip: "Bilibili" }
-    - { class: "iconfont icon-x", link: "https://x.com/zkx_kk1024", tip: "X" }
     # - { class: "iconfont icon-weibo-fill", qrcode: "/img/weibo.jpg", tip: "微博" }
+    - { class: '<svg t="1758103969231" class="icon" viewBox="0 0 1132 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7767" width="200" height="200"><path d="M892.192083 0h173.703855L686.396404 433.761798 1132.860847 1023.997787H783.271495L509.479827 666.01376 196.1907 1023.997787h-173.823336l405.91599-463.948556L0 0h358.44204l247.494693 327.202074L892.192083 0z m-60.970925 920.017978h96.259983L306.144581 98.521279h-103.285048l628.361625 821.496699z" p-id="7768"></path></svg>', link: "https://x.com/zkx_kk1024", tip: "X" }
 
 
 #---------------------------
