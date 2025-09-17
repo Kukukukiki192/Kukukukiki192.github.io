@@ -876,7 +876,7 @@ about:
     # - { class: "iconfont icon-facebook-fill", link: "https://www.facebook.com/zkx.kk1024", tip: "Facebook" }
     # - { class: "iconfont icon-instagram-fill", link: "https://www.instagram.com/zkx_kk1024", qrcode: "/img/ins.JPG", tip: "Instagram" }
     # - { class: "iconfont icon-bilibili-fill", link: "https://space.bilibili.com/384686819", tip: "Bilibili" }
-    - { class: "iconfont icon-twitter-fill", link: "https://mobile.twitter.com/zkx_kk1024", tip: "Twitter" }
+    - { class: "iconfont icon-x", link: "https://x.com/zkx_kk1024", tip: "X" }
     # - { class: "iconfont icon-weibo-fill", qrcode: "/img/weibo.jpg", tip: "微博" }
 
 
