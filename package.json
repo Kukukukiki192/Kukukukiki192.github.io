@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "braces": "^3.0.3",
-    "got": "^14.4.8",
+    "got": "^14.4.9",
     "hexo": "^8.0.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-github-emojis": "^3.0.5",
