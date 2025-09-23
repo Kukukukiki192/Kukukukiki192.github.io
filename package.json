@@ -37,6 +37,6 @@
     "markdown-it-emoji": "^3.0.0",
     "minimist": "^1.2.8",
     "node-fetch": "^3.3.2",
-    "tar": "^7.4.3"
+    "tar": "^7.5.0"
   }
 }
