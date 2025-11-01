@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "braces": "^3.0.3",
-    "got": "^14.4.7",
-    "hexo": "^7.3.0",
+    "got": "^14.5.0",
+    "hexo": "^8.0.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-github-emojis": "^3.0.5",
     "hexo-generator-archive": "^2.0.0",
@@ -29,7 +29,7 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-fluid": "^1.9.8",
     "hexo-theme-landscape": "^1.1.0",
-    "http-cache-semantics": "^4.1.1",
+    "http-cache-semantics": "^4.2.0",
     "ip": "^2.0.1",
     "live2d-widget-model-hijiki": "^1.0.5",
     "live2d-widget-model-koharu": "^1.0.5",
@@ -37,6 +37,6 @@
     "markdown-it-emoji": "^3.0.0",
     "minimist": "^1.2.8",
     "node-fetch": "^3.3.2",
-    "tar": "^7.4.3"
+    "tar": "^7.5.1"
   }
 }
