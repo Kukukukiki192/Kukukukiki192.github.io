@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>针对大仓库的安全clone命令</title>
+    <link href="/2025/11/01/clone/"/>
+    <url>/2025/11/01/clone/</url>
+    
+    <content type="html"><![CDATA[<h2 id="通用稳定-clone-模板"><a href="#通用稳定-clone-模板" class="headerlink" title="通用稳定 clone 模板"></a>通用稳定 clone 模板</h2><p>适合大仓库或网络不稳定的情况，SSH 直接可用：</p><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">===============================</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">Git 大仓库稳定克隆模板（SSH）</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">===============================</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">1️⃣ 增大传输缓冲区（防止 early EOF）</span><br>git config --global http.postBuffer 524288000   # 500MB<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">2️⃣ 关闭压缩，提高下载稳定性</span><br>git config --global core.compression 0<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">3️⃣ 克隆仓库（完整历史）</span><br>git clone git@github.com:用户名/仓库名.git<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">-------------------------------</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">可选：如果想用浅克隆加速首次下载</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">git <span class="hljs-built_in">clone</span> --depth 1 git@github.com:用户名/仓库名.git</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">cd</span> 仓库名</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">git fetch --unshallow  <span class="hljs-comment"># 拉取完整历史</span></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">-------------------------------</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">4️⃣ 进入仓库</span><br>cd 仓库名<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">5️⃣ 查看远程信息，确保使用 SSH</span><br>git remote -v<br></code></pre></td></tr></tbody></table></figure><p>🔹 特点：<br>•支持大仓库（几百 MB 到几 GB）稳定克隆。<br>•SSH 已认证，安全可靠。<br>•可选浅克隆加速，适合首次下载慢或网络不稳定。<br>•一次配置后，对所有仓库生效，无需重复设置。</p><h2 id="高级一条命令版稳定-clone-模板"><a href="#高级一条命令版稳定-clone-模板" class="headerlink" title="高级一条命令版稳定 clone 模板"></a>高级一条命令版稳定 clone 模板</h2><p>兼顾大仓库、网络不稳定、SSH 认证，同时自动处理浅克隆和全量拉取：</p><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">===============================</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">高级稳定克隆大仓库模板（SSH）</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">===============================</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">一条命令实现：</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">1️⃣ 增大缓冲区</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">2️⃣ 关闭压缩</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">3️⃣ 首次浅克隆避免中断</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">4️⃣ 自动拉取完整历史</span><br><br>GIT_HTTP_MAX_REQUEST_BUFFER=524288000 git -c core.compression=0 clone --depth 1 git@github.com:用户名/仓库名.git temp_clone &amp;&amp; \<br>cd temp_clone &amp;&amp; \<br>git fetch --unshallow &amp;&amp; \<br>cd .. &amp;&amp; \<br>mv temp_clone 仓库名<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">&amp;&amp; → 保证前一个命令成功再执行下一个，避免中途出错。</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">\ → 告诉 Shell “命令没结束，继续下一行”，只是换行符号，不影响逻辑</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">写成一行：</span><br>GIT_HTTP_MAX_REQUEST_BUFFER=524288000 git -c core.compression=0 clone --depth 1 git@github.com:用户名/仓库名.git temp_clone &amp;&amp; cd temp_clone &amp;&amp; git fetch --unshallow &amp;&amp; cd .. &amp;&amp; mv temp_clone 仓库名<br></code></pre></td></tr></tbody></table></figure><p>🔹 功能说明：<br>1.缓冲区增大 → GIT_HTTP_MAX_REQUEST_BUFFER=524288000 防止大仓库下载中断。<br>2.关闭压缩 → -c core.compression=0 提高下载稳定性。<br>3.浅克隆 –depth 1 → 首次下载量小，进度少，更稳定。<br>4.自动 fetch –unshallow → 拉取完整历史，无需手动操作。<br>5.临时文件夹 temp_clone → 克隆过程中避免与已有同名文件夹冲突，最后重命名为目标仓库名。</p><p>这样你以后克隆任何大仓库，只要替换 <strong>用户名/仓库名</strong>，就可以直接用这一条命令，非常稳妥</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Oracle编码规范</title>
     <link href="/2024/08/02/oracleCodeStandards/"/>
     <url>/2024/08/02/oracleCodeStandards/</url>
@@ -96,11 +115,11 @@
     
     <tags>
       
+      <tag>Git</tag>
+      
       <tag>MacOS</tag>
       
       <tag>Homebrew</tag>
-      
-      <tag>Git</tag>
       
       <tag>Java</tag>
       
