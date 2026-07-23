@@ -75,9 +75,7 @@ exiftool '-FileName<CreateDate' -d "%Y%m%d_%H%M%S%%-c.%%e" DIR
 # %%-c	若拍摄日期和时间相同就添加一个顺序号
 # %%e	保留原图片的扩展名
 ```
-
 ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/%E6%88%AA%E5%B1%8F2024-02-03%2012.00.49.png)
-
 Q：`No writable tags set` 说明该照片没有tag `CreateDate`，不能被重命名
 
 A：参考 [Renaming and/or Moving Files](https://exiftool.org/filename.html)，可使用其它的 `DateTimeOriginal` 或 `FileModifyDate` tag
@@ -91,6 +89,10 @@ A：参考 [Renaming and/or Moving Files](https://exiftool.org/filename.html)，
 ```bash
 exiftool -d "%Y%m%d_%H%M%S%%-c.%%e" '-FileName<FileModifyDate' '-FileName<CreateDate' '-FileName<DateTimeOriginal'  DIR
 ```
+> 视频用`CreationDate`更稳定
+> ```bash
+> exiftool -d "%Y%m%d_%H%M%S%%-c.%%e" '-FileName<FileModifyDate' '-FileName<CreationDate'  DIR
+> ```
 
 ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240205011925826.png)
 
