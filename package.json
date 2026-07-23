@@ -34,7 +34,7 @@
     "live2d-widget-model-hijiki": "^1.0.5",
     "live2d-widget-model-koharu": "^1.0.5",
     "live2d-widget-model-tororo": "^1.0.5",
-    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-emoji": "^3.1.0",
     "minimist": "^1.2.8",
     "node-fetch": "^3.3.2",
     "tar": "^7.5.21"
