@@ -886,11 +886,11 @@ about:
     # - { class: "iconfont icon-qq-fill", qrcode: "/img/qq.png", tip: "QQ" }
     # - { class: "iconfont icon-wechat2-fill", qrcode: "/img/wechat.jpg", tip: "WeChat" }
     # - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
-    # - { class: "iconfont icon-facebook-fill", link: "https://www.facebook.com/zkx.kk1024", tip: "Facebook" }
-    # - { class: "iconfont icon-instagram-fill", link: "https://www.instagram.com/zkx_kk1024", qrcode: "/img/ins.JPG", tip: "Instagram" }
-    # - { class: "iconfont icon-bilibili-fill", link: "https://space.bilibili.com/384686819", tip: "Bilibili" }
     # - { class: "iconfont icon-weibo-fill", qrcode: "/img/weibo.jpg", tip: "微博" }
-    - { class: "custom-x-icon", link: "https://x.com/zkx_kk1024", tip: "X" }
+    # - { class: "iconfont icon-bilibili-fill", link: "https://space.bilibili.com/384686819", tip: "Bilibili" }
+    # - { class: "iconfont icon-facebook-fill", link: "https://www.facebook.com/kossinchu", tip: "Facebook" }
+    # - { class: "iconfont icon-instagram-fill", link: "https://www.instagram.com/kossinchu/", qrcode: "/img/ins.JPG", tip: "Instagram" }
+    - { class: "custom-x-icon", link: "https://x.com/kossinchu", tip: "X" }
 
 
 #---------------------------
