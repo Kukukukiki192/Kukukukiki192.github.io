@@ -48,14 +48,72 @@ banner_img: /img/cat.JPG
 
 ## 上传图片失败问题
 
-针对状态码401情况的解决方案：删除旧的token，生成新的token
+### 401 Unauthorized（未授权）
+
+含义：服务器收到请求，但是你没有通过身份验证
+
+常见原因：
+
+① Token 错误或失效（最常见）
+- GitHub Token 被删除
+- Token 过期
+- Token 权限不足
+- 复制 Token 时多了空格
+- 配置文件里还是旧 Token
+
+检查 PicGo 配置，确认：
+- token 是否最新
+- 是否包含完整字符串
+- 有没有引号问题
+
+解决：更新 token
 
 ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207151331420.png)
 
 <div><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207155156678.png" width=40% /><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207155450598.png" width=60% /><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207154220620.png" width=50% /><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230207154627237.png" width=50% /></div>
 
-针对状态码422情况的解决方案：这是由同名文件导致的，修改上传的图片名称或删除之前上传的同名文件
+② GitHub Token 权限不足
+
+如果是 GitHub 图床，旧 token `repo` 权限需要 `Fine-grained token：Contents → Read and Write` 或 classic token 勾选 `repo`，否则上传时 GitHub API 会返回 `401 Bad credentials`
+
+③ PicGo 没读取到你修改后的配置
+
+Mac 常见. 若修改了 `~/.picgo/config.json` 但 Typora 调用的是另一个 PicGo，检查配置文件看 token 是否已更新
+也可以测试上传图片，若失败，说明不是 Typora
+
+### 422 Unprocessable Entity（请求格式错误）
+含义：身份验证通过了，但是服务器无法处理你的请求
+
+常见原因：
+
+① GitHub 仓库路径配置错误
+
+如 PicGo：
+```
+owner:kk1024
+repo:image
+path:img
+```
+实际 `https://github.com/kk1024/image` 不存在或仓库名大小写错误，如 `Images` 和 `images` 可能被 API 区分
+
+② 文件名包含特殊字符
+
+如 `截图 2026-07-24 下午3.20.png` 可能导致：`422 Validation Failed`，建议 PicGo 设置：`时间戳重命名` 或 `YYYYMMDD_HHMMSS`（`20260724_152030.png`）
+
+③ GitHub 文件已经存在
+
+GitHub API 创建文件：
+```
+PUT /repos/{owner}/{repo}/contents/{path}
+```
+若同名文件已存在，可能返回 `422`
+
+解决： 重命名上传或开启时间戳 删除之前上传的同名文件
 
 ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230915213555559.png)
 
 ![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20230915214145277.png)
+
+④ 图床接口限制
+
+如 SM.MS：图片太大 / 频率限制
