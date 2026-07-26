@@ -39,7 +39,7 @@ start HTTP server @ 0.0.0.0:5244
 
 浏览器访问 http://127.0.0.1:5244
 
-![openlist1](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist1.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist1.png)
 
 ## 开机自启
 
@@ -96,12 +96,12 @@ INFO[2026-01-05 00:51:49] reading config file: /Users/k/openlist/data/config.jso
 
 ```bash
 WorkingDirectory/data
-├── config.json # 程序运行配置（端口、站点设置）
-├── data.db			# 核心数据库核心数据库（挂载网盘、用户、任务等）
-├── data.db-shm # SQLite 共享内存索引（WAL 配套）
-├── data.db-wal # SQLite 写前日志（运行时最新数据）
-├── log					# 运行日志（排错用，可删）
-└── temp				# 临时文件（下载/代理中转，可删）
+├── config.json  # 程序运行配置（端口、站点设置）
+├── data.db     # 核心数据库（挂载网盘、用户、任务等）
+├── data.db-shm # SQLite共享内存索引（WAL配套）
+├── data.db-wal # SQLite写前日志（运行时最新数据）
+├── log         # 运行日志（排错用，可删）
+└── temp        # 临时文件（下载/代理中转，可删）
 ```
 
 这是 **OpenList + SQLite（WAL 模式）** 的典型结构，data.db + data.db-wal + data.db-shm **必须成套**
@@ -124,7 +124,7 @@ mv ~/data ~/openlist/
 
 选择“阿里云盘Open” 填入得到的刷新令牌
 
-![openlist2](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist2.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist2.png)
 
 ### 百度网盘
 
@@ -132,9 +132,9 @@ mv ~/data ~/openlist/
 
 下载文件报错，因为百度网盘下载>20M需要修改UA➡️后台开启代理
 
-![openlist3](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist3.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist3.png)
 
-![openlist4](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist4.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist4.png)
 
 ### 夸克网盘 一刻相册
 
@@ -142,31 +142,31 @@ mv ~/data ~/openlist/
 
 一刻相册获取Cookie同上
 
-![openlist5](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist5.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist5.png)
 
 ### 迅雷云盘
 
 选择“迅雷” 填入账号(手机号)密码和短信验证后得到的`creditkey`
 
-![openlist6](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist6.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist6.png)
 
-![openlist7](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist7.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist7.png)
 
-![openlist8](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist8.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist8.png)
 
 ### 中国移动云盘
 
 启用 `Web 代理`  填入账号(手机号)密码和`Authorization`
 
-![openlist9](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist9.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist9.png)
 
 获取`Authorization`  以下方法都行：
 
-![openlist10](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist10.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist10.png)
 
 ### 配置完成✅
 
-![openlist11](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist11.png)
+![](https://github.com/Kukukukiki192/TyporaImg/raw/main/img/openlist11.png)
 
 可在本地数据库文件查看已挂载的网盘信息 (`SELECT id, mount_path, driver, remark, status FROM x_storages;`)
 
