@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/bug.png">
 <meta property="article:published_time" content="2023-09-12T17:16:56.000Z">
-<meta property="article:modified_time" content="2024-09-13T08:42:24.027Z">
+<meta property="article:modified_time" content="2026-07-31T09:38:06.027Z">
 <meta property="article:author" content="K">
 <meta property="article:tag" content="bug">
 <meta name="twitter:card" content="summary_large_image">
@@ -331,15 +331,16 @@
 </blockquote>
 <p>使用 exiftool 工具更改文件名. 注意替换 <code>DIR</code> 路径，这将把指定目录下所有文件的文件名更改为类似 <code>20240202_123045-1.jpg</code> 的格式，其中包含了照片的创建日期和时间信息</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install exiftool<br>exiftool <span class="hljs-string">'-FileName&lt;CreateDate'</span> -d <span class="hljs-string">"%Y%m%d_%H%M%S%%-c.%%e"</span> DIR<br><span class="hljs-comment"># DateTimeOriginal图片原始拍摄时间 CreateDate图片创建时间 FileModifyDate图片修改时间 AllDates这3个tag的快捷方式tag</span><br><span class="hljs-comment"># -d	设置日期/时间的格式</span><br><span class="hljs-comment"># %Y%m%d_%H%M%S	具体的日期/时间组织格式</span><br><span class="hljs-comment"># %%-c	若拍摄日期和时间相同就添加一个顺序号</span><br><span class="hljs-comment"># %%e	保留原图片的扩展名</span><br></code></pre></td></tr></tbody></table></figure>
-
-<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/%E6%88%AA%E5%B1%8F2024-02-03%2012.00.49.png" srcset="/img/loading.gif" lazyload></p>
-<p>Q：<code>No writable tags set</code> 说明该照片没有tag <code>CreateDate</code>，不能被重命名</p>
+<p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/%E6%88%AA%E5%B1%8F2024-02-03%2012.00.49.png" srcset="/img/loading.gif" lazyload><br>Q：<code>No writable tags set</code> 说明该照片没有tag <code>CreateDate</code>，不能被重命名</p>
 <p>A：参考 <a target="_blank" rel="noopener" href="https://exiftool.org/filename.html">Renaming and/or Moving Files</a>，可使用其它的 <code>DateTimeOriginal</code> 或 <code>FileModifyDate</code> tag</p>
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240203115522399.png" srcset="/img/loading.gif" lazyload></p>
 <p>为方便使用合适的时间tag批量重命名图片，用以下方式，tag往左覆盖有效</p>
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240203131526301.png" srcset="/img/loading.gif" lazyload></p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">exiftool -d <span class="hljs-string">"%Y%m%d_%H%M%S%%-c.%%e"</span> <span class="hljs-string">'-FileName&lt;FileModifyDate'</span> <span class="hljs-string">'-FileName&lt;CreateDate'</span> <span class="hljs-string">'-FileName&lt;DateTimeOriginal'</span>  DIR<br></code></pre></td></tr></tbody></table></figure>
-
+<blockquote>
+<p>视频用<code>CreationDate</code>更稳定</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">exiftool -d <span class="hljs-string">"%Y%m%d_%H%M%S%%-c.%%e"</span> <span class="hljs-string">'-FileName&lt;FileModifyDate'</span> <span class="hljs-string">'-FileName&lt;CreationDate'</span>  DIR<br></code></pre></td></tr></tbody></table></figure>
+</blockquote>
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240205011925826.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://github.com/Kukukukiki192/TyporaImg/raw/main/img/image-20240205143440097.png" srcset="/img/loading.gif" lazyload></p>
 <p>Q：用 exiftool 重命名截图后，显示的不是原始截图时间，而是编辑截图后的修改时间</p>
